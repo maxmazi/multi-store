@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="fa">
+
+<head>
+    <title>سایت چند فروشگاهی</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/fav.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.rtl.min.css" integrity="sha384-4dNpRvNX0c/TdYEbYup8qbjvjaMrgUPh+g4I03CnNtANuv+VAvPL6LqdwzZKV38G" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bootstrap-utilities.rtl.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.rtl.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav-style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/user-dashboard.css">
+</head>
+
+<body>
+    <p id="top"></p>
+    <!--navbar-->
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <nav class="navbar navbar-light bg-custom px-5 py-4 fixed-top">
+                <div class="container-fluid">
+                    <form class="d-flex col-lg-8">
+                        <a class="navbar-brand me-5 my-auto" href="index.html">LOGO</a>
+                        <input class="form-control me-2 search-form" type="search" placeholder="جستجو در کالاها" aria-label="Search">
+                    </form>
+                    <div class="utilities col-lg-4 d-flex flex-row-reverse my-auto">
+                        <div class="nav-link cart ps-3 py-1"><i class="fi-xnluhx-shopping-cart"></i></div>
+                        <div class="nav-link dropdown-toggle pe-3 user py-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fi-xnluxx-user"></i>
+                        </div>
+                        <ul class="dropdown-menu user-drop" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row justify-content-between snd-nav fixed-top" id="secondNav">
+            <nav class="navbar navbar-expand-lg navbar-light bg-custom px-5">
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link active me-2 item" aria-current="page" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fi-xnsuxl-three-bars-solid"></i>دسته بندی کالاها</a>
+                                <ul class="dropdown-menu megamenu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link item" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link item" href="#">Pricing</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--heder-end-->
+
+    <!--injaaaaaa-->
+    <div class="container-fluid Account" style=" max-width: 1490px;    padding-top: 150px;">
+        <div class="row">
+            <div class="col-3 dashbord-d list-account" style="margin-left: 25px; padding: 10px;">
+<div class="row m-0" style="border-bottom: 1px solid #ededed;">
+    <div class="col-3">
+        <i class="fi-xnsuxl-user-solid Profile-picture"></i>
+    </div>
+<div class="col-8 d-flex">
+    <p class="align-self-center m-0  Profile-name">09033584653</p>
+</div>
+</div>
+<div>
+    <div class="d-flex align-items-start">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <button class="nav-link text-start active" id="My-orders-tab" data-bs-toggle="pill" data-bs-target="#My-orders" type="button" role="tab" aria-controls="My-orders" aria-selected="true"> <i class="fi-xnluxl-clipboard-list"></i>سفارش های من </button>
+          <button class="nav-link text-start" id="Lists-tab" data-bs-toggle="pill" data-bs-target="#Lists" type="button" role="tab" aria-controls="Lists" aria-selected="false"><i class="fi-xnsuxl-heart-solid"></i>لیست ها</buttona>
+          <button class="nav-link text-start" id="Comments-tab" data-bs-toggle="pill" data-bs-target="#Comments" type="button" role="tab" aria-controls="Comments" aria-selected="false"> <i class="fi-xtluxl-comment-square-thin"></i>نظرات</button>
+          <button class="nav-link text-start" id="Addresses-tab" data-bs-toggle="pill" data-bs-target="#Addresses" type="button" role="tab" aria-controls="Addresses" aria-selected="false"> <i class="fi-xtluxl-label-thin"></i>نشانی ها</button>
+          <button class="nav-link text-start" id="gift-card-tab" data-bs-toggle="pill" data-bs-target="#gift-card" type="button" role="tab" aria-controls="gift-card" aria-selected="false"> <i class="fi-xnluxl-credit-card"></i>کارت هدیه</button>
+          <button class="nav-link text-start" id="Messages-tab" data-bs-toggle="pill" data-bs-target="#Messages" type="button" role="tab" aria-controls="Messages" aria-selected="false"> <i class="fi-xwsuxl-envelope-solid"></i>پیغام ها</button>
+          <button class="nav-link text-start" id="Recent-Visits-tab" data-bs-toggle="pill" data-bs-target="#Recent-Visits" type="button" role="tab" aria-controls="Recent-Visits" aria-selected="false"> <i class="fi-cwluhl-clock-wide"></i>بازدید های اخیر</button>
+        </div>
+      
+      </div>
+</div>           
+</div>
+            <div class="col-9 dashbord-d" style="width: 73%;">
+        
+                <div class="container-fluid">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="My-orders" role="tabpanel" aria-labelledby="My-orders-tab">
+
+                            <h4> تاریخچه سفارشات </h4>
+                            <hr style="width: 100px;
+                        color: #fd4040;
+                        opacity: 1;
+                        height: 1.5px;">
+
+                            <div class="row">
+                                <ul class="nav nav-pills mb-3 dashbord" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="Awaiting-Payment-tab" data-bs-toggle="pill" data-bs-target="#Awaiting-Payment" type="button" role="tab" aria-controls="Awaiting-Payment" aria-selected="true">در انتظار پرداخت <span class="badge bg-danger">4</span></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="Processing-tab" data-bs-toggle="pill" data-bs-target="#Processing" type="button" role="tab" aria-controls="Processing" aria-selected="false">در حال پردازش <span class="badge bg-danger">0</span></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="delivered-tab" data-bs-toggle="pill" data-bs-target="#delivered" type="button" role="tab" aria-controls="delivered" aria-selected="false">تحویل داده شده<span class="badge bg-danger">4</span></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="returned-tab" data-bs-toggle="pill" data-bs-target="#returned" type="button" role="tab" aria-controls="returned" aria-selected="false">مرجوعی<span class="badge bg-danger">4</span></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="Canceled-tab" data-bs-toggle="pill" data-bs-target="#Canceled" type="button" role="tab" aria-controls="Canceled" aria-selected="false">لغو شده <span class="badge bg-danger">4</span></button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="Awaiting-Payment" role="tabpanel" aria-labelledby="Awaiting-Payment-tab">در انتظار پرداخت</div>
+                                    <div class="tab-pane fade" id="Processing" role="tabpanel" aria-labelledby="Processing-tab">در حال پردازش</div>
+                                    <div class="tab-pane fade" id="delivered" role="tabpanel" aria-labelledby="delivered-tab">تحویل داده شده</div>
+                                    <div class="tab-pane fade" id="returned" role="tabpanel" aria-labelledby="returned-tab">مرجوعی</div>
+                                    <div class="tab-pane fade" id="Canceled" role="tabpanel" aria-labelledby="Canceled-tab">لغو شده</div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="tab-pane fade" id="Lists" role="tabpanel" aria-labelledby="Lists-tab">لیست ها</div>
+                        <div class="tab-pane fade" id="Comments" role="tabpanel" aria-labelledby="Comments-tab">نظرات</div>
+                        <div class="tab-pane fade" id="Addresses" role="tabpanel" aria-labelledby="Addresses-tab">نشانی ها</div>
+                        <div class="tab-pane fade" id="gift-card" role="tabpanel" aria-labelledby="gift-card-tab">کارت هدیه</div>
+                        <div class="tab-pane fade" id="Messages" role="tabpanel" aria-labelledby="Messages-tab">پیغام ها</div>
+                        <div class="tab-pane fade" id="Recent-Visits" role="tabpanel" aria-labelledby="Recent-Visits-tab">بازدید های اخیر</div>
+                      </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+    <!--footer-star-->
+    <footer class="container-fluid footer ">
+        <div class="col-lg-12 d-none d-md-block d-lg-block d-xl-block d-xxl-block top ">
+            <a href="#top " class="top-text "><i class="fi-cnluxl-chevron me-1 "></i>برگشت به بالا</a>
+        </div>
+        <div class="container ft-features ">
+            <div class="row ">
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft d-none d-md-none d-lg-none d-xl-block d-xxl-block ">
+                    <a href="# " class="f-features ms-5 "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container ft-features pb-4 d-none d-lg-block ">
+            <div class="row ">
+                <div class="col-lg-2 ">
+                    <h6> <a href="# " class="ft-tt "> راهنمای خرید از دیجی‌کالا</a></h3>
+                        <br>
+                        <a href="# ">نحوه ثبت سفارش</a>
+                        <br>
+                        <a href="# ">رویه ارسال سفارش</a>
+                        <br>
+                        <a href="# ">شیوه‌های پرداخت</a>
+                </div>
+                <div class="col-lg-2 ">
+                    <h6><a href="# " class="ft-tt ">خدمات مشتریان</a></h6>
+                    <br>
+                    <a href="# ">پاسخ به پرسش‌های متداول</a>
+                    <br>
+                    <a href="# ">رویه‌های بازگرداندن کالا</a>
+                    <br>
+                    <a href=" ">شرایط استفاده</a>
+                    <br>
+                    <a href="# ">حریم خصوصی</a>
+                    <br>
+                    <a href="# ">گزارش باگ</a>
+                </div>
+                <div class="col-lg-2 ">
+                    <h6><a href="# " class="ft-tt ">با دیجی‌کالا</a></h6>
+                    <br>
+                    <a href="# ">اتاق خبر دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">فروش در دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">فرصت‌های شغلی</a>
+                    <br>
+                    <a href="# ">تماس با دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">درباره دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">راهنمای هویت بصری</a>
+                </div>
+
+                <div class="col-lg-6 ">
+                    <h6>از تخفیف‌ها و جدیدترین‌های دیجی‌کالا باخبر شوید:</h6>
+                    <form class="d-flex ">
+                        <input class="form-control ft-email " type="email " placeholder="آدرس ایمیل خود را وارد کنید " aria-label="email ">
+                        <button class="btn btn-outline-success ft-email-submit " type="submit ">ارسال</button>
+                    </form>
+                    <p class="so-li ">دیجی‌کالا را در شبکه‌های اجتماعی دنبال کنید:</p>
+                    <a href="# "><i class="fi-xnsux3-instagram ft-Social-Networks me-2 "></i></a>
+                    <a href="# "> <i class="fi-xnsux3-twitter ft-Social-Networks "></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container desktop-footer ">
+            <div class="row ">
+                <div class="col-6 text-end ">
+                    <p>هفت روز هفته ، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم</p>
+                </div>
+                <div class="col-2 ">
+                    <p>شماره تماس : <a href="# ">۶۱۹۳۰۰۰۰ - ۰۲۱</a> </p>
+                </div>
+                <div class="col-4 ">
+                    <p> آدرس ایمیل: <a href="# ">info@digikala.com</a></p>
+                </div>
+                <div class="col d-flex justify-content-center ">
+                    <a href="# "><img src="../multi shop/images/footer/سیب اپ.png " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "><img src="../multi shop/images/footer/مایکت.svg " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "><img src="../multi shop/images/footer/بازار.svg " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "> <img src="../multi shop/images/footer/گوگل پلی.png " alt=" " class="ft-ap "></a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid ft-bootem ">
+            <div class="row ">
+                <div class="col-8 ">
+                    <h6 class="mt-4 ">فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلاین</h6>
+                    <p class="ft-bootem-text "> .دیجی‌کالا به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با بیش از یک دهه تجربه، با پایبندی به سه اصل، پرداخت در محل، 7 روز ضمانت بازگشت کالا و تضمین اصل‌بودن کالا موفق شده تا همگام با فروشگاه‌های معتبر جهان، به بزرگ‌ترین فروشگاه
+                        اینترنتی ایران تبدیل شود. به محض ورود به سایت دیجی‌کالا با دنیایی از کالا رو به رو می‌شوید! هر آنچه که نیاز دارید و به ذهن شما خطور می‌کند در اینجا پیدا خواهید کرد<a href="# ">مشاهده بیشتر</a></p>
+                </div>
+                <div class="col-4 pt-3 ">
+                    <a href="# " class="ft-enamad-b "> <img src="../multi shop/images/footer/نشان ملی.png " alt=" " class="ft-enamad "></a>
+                    <a href="# " class="ft-enamad-b "><img src="../multi shop/images/footer/نماد الکترونیک.png " alt=" " class="ft-enamad "></a>
+                    <a href="# " class="ft-enamad-b "> <img src="../multi shop/images/footer/کسب و کار مجاز.png " alt=" " class="ft-enamad "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/1.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/2.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/3.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/4.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/5.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/6.svg " alt=" "></a>
+                </div>
+            </div>
+        </div>
+        <!--mobile footer-->
+        <div class="container-fluid m-links mb-3 ">
+            <div class="row pb-3 ">
+                <p class="so-li ">ما را در شبکه های اجتماعی دنبال کنید</p>
+                <button class="btn btn-insta "><i class="fi-xnsuxx-instagram me-2 "></i>  اینستاگرام فروشگاه</button>
+            </div>
+            <div class="row ">
+                <div class="col-6 ">
+                    <ul class="list-unstyled text-center text-muted ">
+                        <li><a href="# "><small>نحوه ثبت سفارش</small></a></li>
+                        <li><a href="# "><small>راهنما</small></a></li>
+                        <li><a href="# "><small>درباره ما</small></a></li>
+                        <li><a href="# "><small>اینفوگرافی</small></a></li>
+                        <li><a href="# "><small>گزارش باگ</small></a></li>
+                        <li><a href="# "><small>تماس با ما</small></a></li>
+
+                    </ul>
+                </div>
+                <div class="col-6 ">
+                    <ul class="list-unstyled text-center text-muted ">
+                        <li><a href="# "><small>فروش در سایت</small></a></li>
+                        <li><a href="# "><small>فرصت های شغلی</small></a></li>
+                        <li><a href="# "><small>سوالات متداول</small></a></li>
+                        <li><a href="# "><small>دانلود اپلیکیشن</small></a></li>
+                        <li><a href="# "><small>شرایط استفاده</small></a></li>
+                        <li><a href="# "><small>حریم خصوصی</small></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <h6 class="ft-about-tt text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h6>
+                <p class="ft-about ">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،<span id="dots">...</span><span id="more"> و برای شرایط فعلی تکنولوژی مورد
+                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی،
+                و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                اساسا مورد استفاده قرار گیرد.</span>
+                </p>
+                <div class="dots"></div>
+                <button onclick="myFunction() " id="myBtn" class="more-btn btn">نمایش بیشتر </button>
+            </div>
+
+            <hr class="ft-hr ">
+            <p class="cpr mb-0 "><small>کلیه حقوق این سایت متعلق</small></p>
+            <p class="cpr pb-2 "><small>به شرکت ...................(سایت فروشگاهی) می باشد</small></p>
+        </div>
+    </footer>
+    <!--footer-end-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+
+</html>

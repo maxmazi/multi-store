@@ -1,0 +1,35 @@
+.dashbord .active{
+    background-color: transparent !important;
+    border-bottom: 2px solid red;
+    color: red !important ; 
+    border-radius: 0;
+}
+
+.dashbord-d{
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ededed;
+    padding: 30px;
+}
+
+.Profile-picture{
+    font-size: 50px;
+    background: #dedede;
+    border-radius: 50%;
+    color: white;
+}
+
+.Profile-name{
+    color: #9c9c9c;
+}
+
+.dashbord{
+    border-bottom: 1px solid #ededed;
+}
+
+
+.list-account .active{
+    background-color: transparent !important;
+border-radius: 0 !important;
+    color: #11d8d8  !important;
+}

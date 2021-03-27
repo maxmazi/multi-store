@@ -1,0 +1,31 @@
+body{
+background: #fff;
+
+}
+
+.login-submit{
+    width: 25rem;
+    border: none;
+    padding: 9px;
+    border-radius: 8px;
+    margin-top: 20px;
+    background: #ef394e;
+}
+
+.login-submit:hover{
+    background: #ef394e;
+}
+
+.login-page{
+    padding: 10%;
+}
+
+.login-text{
+    margin: 2px;
+    font-size: 14px;
+    color: #6d6d6d;
+}
+
+.login-number:focus{
+    box-shadow: none;
+}

@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title>سایت چند فروشگاهی</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/fav.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.rtl.min.css" integrity="sha384-4dNpRvNX0c/TdYEbYup8qbjvjaMrgUPh+g4I03CnNtANuv+VAvPL6LqdwzZKV38G" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bootstrap-utilities.rtl.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.rtl.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav-style.css">
+    <link rel="stylesheet" href="css/index-style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+</head>
+
+<body>
+    <!--navbar-->
+    <div class="container-fluid desktop-nav">
+        <div class="row justify-content-between">
+            <nav class="navbar navbar-light bg-custom px-5 py-4 fixed-top">
+                <div class="container-fluid">
+                    <form class="d-flex col-lg-8">
+                        <a class="navbar-brand me-5 my-auto" href="index.html">LOGO</a>
+                        <input class="form-control me-2 search-form" type="search" placeholder="جستجو در کالاها" aria-label="Search">
+                    </form>
+                    <div class="utilities col-lg-4 d-flex flex-row-reverse my-auto">
+                        <div class="nav-link cart ps-3 py-1"><i class="fi-xnluhx-shopping-cart"></i></div>
+                        <div class="nav-link dropdown-toggle pe-3 user py-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fi-xnluxx-user"></i>
+                        </div>
+                        <ul class="dropdown-menu user-drop" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row justify-content-between snd-nav fixed-top" id="secondNav">
+            <nav class="navbar navbar-expand-lg navbar-light bg-custom px-5">
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link active me-2 item" aria-current="page" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fi-xnsuxl-three-bars-solid"></i>دسته بندی کالاها</a>
+                                <ul class="dropdown-menu megamenu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link item" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link item" href="#">Pricing</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <!--mobile nav-->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "70%";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.style.backgroundColor = "#f5f5f5";
+        }
+    </script>
+
+    <div class="navbar mob-nav p-2 mobile-nav m-bg d-flex">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-menu" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size:21px;cursor:pointer;padding-right:15px;">
+            &#9776;
+  </button>
+        <a class="navbar-brand" href="index.html">LOGO</a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog m-modal">
+                <div class="modal-content m-modal-dialog">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-nav row justify-content-between">
+            <nav class="navbar navbar-light bg-custom px-lg-5 py-lg-4 p-xs-0 p-sm-0">
+                <div class="container-fluid mobile-cf">
+                    <form class="d-flex col-lg-8 col-7">
+                        <input class="w-100 mobile-search form-control me-2 search-form" type="search" placeholder="جستجو" aria-label="Search">
+                    </form>
+                    <div class="utilities col-lg-4 col-5 d-flex flex-row-reverse my-auto">
+                        <div class="nav-link cart ps-1 py-1" href="#" role="button"><i class="fi-xwsuhl-shopping-cart"></i></div>
+                        <div class="nav-link pe-2 user py-1" href="#" role="button"><i class="fi-xnsuxl-user"></i></div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!--header slider-->
+
+    <div id="carouselExampleCaptions" class="carousel slide head-car desktop-carousel" data-bs-ride="carousel">
+        <div class="carousel-indicators mb-xs-1">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="indicator head-ind active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="indicator head-ind" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="indicator head-ind" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/4.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                    <button class="btn btn-warning carousel-btn" target="#">همین الان بخر</button>
+                </div>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <div id="mobileCarousel" class="carousel slide mobile-carousel head-car" data-bs-ride="carousel">
+        <div class="carousel-indicators m-indic">
+            <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="0" class="indicator head-ind active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="1" class="indicator head-ind" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="2" class="indicator head-ind" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner m-inner">
+            <div class="carousel-item active">
+                <img src="images/4.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/3.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/2.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--swiper slider-->
+    <div class="container-fluid bg-offer swiper-d">
+        <div class="container-cat">
+            <div class="row ms-5 ms-lg-0">
+                <a href="#" class="col-lg-2 mx-5 mx-lg-2 see-all">
+                    <div class="w-100">
+                        <img src="images/1.png" alt="all" class="img-thumbnail all-img">
+                        <button class="btn btn-outline-light mt-4 btn-all">مشاهده همه</button>
+                    </div>
+                </a>
+                <div class="swiper-container col-lg-10 mx-1">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="swiper-item swiper-slide card">
+                            <div class="card-img">
+                                <img class="img-thumbnail py-5" src="images/m1.jpg">
+                            </div>
+                            <div class="card-body py-1">
+                                <p class="text-start my-0">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <div class="d-flex flex-row-reverse my-1 off">
+                                    <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                    <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                </div>
+                                <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="text-muted my-0">این یک فوتر است</p>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-item swiper-slide card">
+                            <div class="card-img">
+                                <img class="img-thumbnail py-5" src="images/m2.jpg">
+                            </div>
+                            <div class="card-body py-1">
+                                <p class="text-start my-0">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <div class="d-flex flex-row-reverse my-1 off">
+                                    <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                    <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                </div>
+                                <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="text-muted my-0">این یک فوتر است</p>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-item swiper-slide card">
+                            <div class="card-img">
+                                <img class="img-thumbnail py-5" src="images/m3.jpg">
+                            </div>
+                            <div class="card-body py-1">
+                                <p class="text-start my-0">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <div class="d-flex flex-row-reverse my-1 off">
+                                    <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                    <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                </div>
+                                <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="text-muted my-0">این یک فوتر است</p>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-item swiper-slide card">
+                            <div class="card-img">
+                                <img class="img-thumbnail py-5" src="images/m4.jpg">
+                            </div>
+                            <div class="card-body py-1">
+                                <p class="text-start my-0">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <div class="d-flex flex-row-reverse my-1 off">
+                                    <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                    <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                </div>
+                                <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="text-muted my-0">این یک فوتر است</p>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-item swiper-slide card">
+                            <div class="card-img">
+                                <img class="img-thumbnail py-5" src="images/m5.jpg">
+                            </div>
+                            <div class="card-body py-1">
+                                <p class="text-start my-0">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <div class="d-flex flex-row-reverse my-1 off">
+                                    <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                    <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                </div>
+                                <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="text-muted my-0">این یک فوتر است</p>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-item swiper-slide card">
+                            <div class="card-img">
+                                <img class="img-thumbnail py-5" src="images/m6.jpg">
+                            </div>
+                            <div class="card-body py-1">
+                                <p class="text-start my-0">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <div class="d-flex flex-row-reverse my-1 off">
+                                    <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                    <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                </div>
+                                <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="text-muted my-0">این یک فوتر است</p>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-item swiper-slide card">
+                            <div class="card-img">
+                                <img class="img-thumbnail py-5" src="images/m1.jpg">
+                            </div>
+                            <div class="card-body py-1">
+                                <p class="text-start my-0">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <div class="d-flex flex-row-reverse my-1 off">
+                                    <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                    <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                </div>
+                                <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="text-muted my-0">این یک فوتر است</p>
+                            </div>
+                        </a>
+
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next button-next" style="position: absolute;top: 40%;left: 1px;background-color:#fff; border-top-left-radius:0 !important; border-bottom-left-radius:0 !important; color: #3d3d3d;box-shadow: 1px 1px 6px rgba(0,0,0,0.2);"></div>
+                    <div class="swiper-button-prev button-prev" style="position: absolute;top: 40%;right: 1px;background-color:#fff; border-top-right-radius:0 !important; border-bottom-right-radius:0 !important; color: #3d3d3d;box-shadow: 1px 1px 6px rgba(0,0,0,0.2);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid bg-offer swiper-m">
+        <div class="container-cat">
+            <div class="row">
+                <div class="swiper-container m-cont col-lg-10 mx-1">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="swiper-item swiper-slide card ms-item">
+                            <div class="card-img">
+                                <img class="img-thumbnail py-1" src="images/m1.jpg">
+                            </div>
+                            <div class="card-body py-1">
+                                <p class="text-start my-0 m-text">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <div class="d-flex flex-row-reverse my-1 off">
+                                    <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                    <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                </div>
+                                <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-item swiper-slide card ms-item">
+                            <div class="card-img">
+                                <img class="img-thumbnail py-1" src="images/m2.jpg">
+                            </div>
+                            <div class="card-body py-1">
+                                <p class="text-start my-0 m-text">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <div class="d-flex flex-row-reverse my-1 off">
+                                    <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                    <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                </div>
+                                <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-item swiper-slide card ms-item">
+                            <div class="card-img">
+                                <img class="img-thumbnail py-1" src="images/m3.jpg">
+                            </div>
+                            <div class="card-body py-1">
+                                <p class="text-start my-0 m-text">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <div class="d-flex flex-row-reverse my-1 off">
+                                    <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                    <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                </div>
+                                <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-item swiper-slide card ms-item">
+                            <div class="card-img">
+                                <img class="img-thumbnail py-1" src="images/m4.jpg">
+                            </div>
+                            <div class="card-body py-1">
+                                <p class="text-start my-0 m-text">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <div class="d-flex flex-row-reverse my-1 off">
+                                    <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                    <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                </div>
+                                <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-item swiper-slide card ms-item">
+                            <div class="card-img">
+                                <img class="img-thumbnail py-1" src="images/m5.jpg">
+                            </div>
+                            <div class="card-body py-1">
+                                <p class="text-start my-0 m-text">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <div class="d-flex flex-row-reverse my-1 off">
+                                    <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                    <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                </div>
+                                <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-item swiper-slide card ms-item">
+                            <div class="card-img">
+                                <img class="img-thumbnail py-1" src="images/m6.jpg">
+                            </div>
+                            <div class="card-body py-1">
+                                <p class="text-start my-0 m-text">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <div class="d-flex flex-row-reverse my-1 off">
+                                    <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                    <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                </div>
+                                <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-item swiper-slide card ms-item">
+                            <div class="card-img">
+                                <img class="img-thumbnail py-1" src="images/m1.jpg">
+                            </div>
+                            <div class="card-body py-1">
+                                <p class="text-start my-0 m-text">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <div class="d-flex flex-row-reverse my-1 off">
+                                    <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                    <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                </div>
+                                <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                        </a>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--catgory list-->
+    <div class="container cat">
+        <div class="row">
+            <div class="col-lg-3 my-4 py-3">
+                <a href="#"><img class="cat-img" alt="" src="images/c1.jpg" type="button"></a>
+            </div>
+            <div class="col-lg-3 my-4 py-3">
+                <a href="#"><img class="cat-img" alt="" src="images/c2.jpg" type="button"></a>
+            </div>
+            <div class="col-lg-3 my-4 py-3">
+                <a href="#"><img class="cat-img" alt="" src="images/c3.jpg" type="button"></a>
+            </div>
+            <div class="col-lg-3 my-4 py-3">
+                <a href="#"><img class="cat-img" alt="" src="images/c4.jpg" type="button"></a>
+            </div>
+        </div>
+    </div>
+    <!--group-->
+    <div class="container m">
+        <div class="row">
+            <div class="col-lg-10 col-sm-12 mg">
+                <div class="container-fluid groups mg">
+                    <div class="row px-lg-4 px-3">
+
+                        <div class="gp-title d-flex">
+                            <p class="ttl py-3 col-3 text-center">گوشی موبایل</p>
+                            <span class="d-none d-lg-block ttl-next col-9 mx-2"></span>
+                        </div>
+                        <div class="swiper-container group-swiper bg-cat m-cont">
+
+                            <div class="swiper-wrapper">
+                                <a href="#" class="group-item swiper-slide card my-3 mx-2 ms-item">
+                                    <div class="card-img">
+                                        <img class="img-thumbnail" src="images/m1.jpg">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="text-start mb-0">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                        <div class="d-flex flex-row-reverse my-1 off">
+                                            <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                            <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                        </div>
+                                        <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                                    </div>
+                                </a>
+                                <a href="#" class="group-item swiper-slide card my-3 mx-2 ms-item">
+                                    <div class="card-img">
+                                        <img class="img-thumbnail" src="images/m2.jpg">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="text-start">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                        <p class="new-price py-2">23000000<span class="ms-2">تومان</span></p>
+                                    </div>
+                                </a>
+                                <a href="#" class="group-item swiper-slide card my-3 mx-2 ms-item">
+                                    <div class="card-img">
+                                        <img class="img-thumbnail" src="images/m3.jpg">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="text-start">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                        <p class="new-price py-2">23000000<span class="ms-2">تومان</span></p>
+                                    </div>
+                                </a>
+                                <a href="#" class="group-item swiper-slide card my-3 mx-2 ms-item">
+                                    <div class="card-img">
+                                        <img class="img-thumbnail" src="images/m1.jpg">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="text-start mb-0">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                        <div class="d-flex flex-row-reverse my-1 off">
+                                            <p class="capsule bg-danger my-1">60<span>%</span></p>
+                                            <p class="text-muted me-3 price my-1"><del>25000000</del></p>
+                                        </div>
+                                        <p class="new-price my-0">23000000<span class="ms-2">تومان</span></p>
+                                    </div>
+                                </a>
+                                <a href="#" class="group-item swiper-slide card my-3 mx-2 ms-item">
+                                    <div class="card-img">
+                                        <img class="img-thumbnail" src="images/m4.jpg">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="text-start">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                        <p class="new-price py-2">23000000<span class="ms-2">تومان</span></p>
+                                    </div>
+                                </a>
+                                <a href="#" class="group-item swiper-slide card my-3 mx-2 ms-item">
+                                    <div class="card-img">
+                                        <img class="img-thumbnail" src="images/m5.jpg">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="text-start">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                        <p class="new-price py-2">23000000<span class="ms-2">تومان</span></p>
+                                    </div>
+                                </a>
+                                <a href="#" class="group-item swiper-slide card my-3 mx-2 ms-item">
+                                    <div class="card-img">
+                                        <img class="img-thumbnail" src="images/m6.jpg">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="text-start">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                        <p class="new-price py-2">23000000<span class="ms-2">تومان</span></p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next btn-next m-size" style="position: absolute;top: 40%;left: 0;background-color:#fff; border-top-left-radius:0 !important; border-bottom-left-radius:0 !important; color: #3d3d3d;box-shadow: 1px 1px 6px rgba(0,0,0,0.2);"></div>
+                            <div class="swiper-button-prev btn-prev m-size" style="position: absolute;top: 40%;right: 0;background-color:#fff; border-top-right-radius:0 !important; border-bottom-right-radius:0 !important; color: #3d3d3d;box-shadow: 1px 1px 6px rgba(0,0,0,0.2);"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 atmgroup groups px-0 m-size">
+                <div class="gp-title">
+                    <p class="atm-ttl text-center text-muted py-3">پیشنهادهای لحظه ای برای شما</p>
+                </div>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner atm-slider">
+                        <a href="#" class="atm-item active carousel-item card my-3 mx-2">
+                            <div class="card-img">
+                                <img class="img-thumbnail" src="images/m4.jpg">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-start">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <p class="new-price py-2">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                        </a>
+                        <a href="#" class="atm-item carousel-item card my-3 mx-2">
+                            <div class="card-img">
+                                <img class="img-thumbnail" src="images/m1.jpg">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-start">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <p class="new-price py-2">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                        </a>
+                        <a href="#" class="atm-item carousel-item card my-3 mx-2">
+                            <div class="card-img">
+                                <img class="img-thumbnail" src="images/m5.jpg">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-start">لورم ایپسوم متن ساختگی برای طراحان صنعت چاپ </p>
+                                <p class="new-price py-2">23000000<span class="ms-2">تومان</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer class="container-fluid footer ">
+        <div class="col-lg-12 d-none d-md-block d-lg-block d-xl-block d-xxl-block top ">
+            <a href="#top " class="top-text "><i class="fi-cnluxl-chevron me-1 "></i>برگشت به بالا</a>
+        </div>
+        <div class="container ft-features ">
+            <div class="row ">
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft d-none d-md-none d-lg-none d-xl-block d-xxl-block ">
+                    <a href="# " class="f-features ms-5 "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container ft-features pb-4 d-none d-lg-block ">
+            <div class="row ">
+                <div class="col-lg-2 ">
+                    <h6> <a href="# " class="ft-tt "> راهنمای خرید از دیجی‌کالا</a></h3>
+                        <br>
+                        <a href="# ">نحوه ثبت سفارش</a>
+                        <br>
+                        <a href="# ">رویه ارسال سفارش</a>
+                        <br>
+                        <a href="# ">شیوه‌های پرداخت</a>
+                </div>
+                <div class="col-lg-2 ">
+                    <h6><a href="# " class="ft-tt ">خدمات مشتریان</a></h6>
+                    <br>
+                    <a href="# ">پاسخ به پرسش‌های متداول</a>
+                    <br>
+                    <a href="# ">رویه‌های بازگرداندن کالا</a>
+                    <br>
+                    <a href=" ">شرایط استفاده</a>
+                    <br>
+                    <a href="# ">حریم خصوصی</a>
+                    <br>
+                    <a href="# ">گزارش باگ</a>
+                </div>
+                <div class="col-lg-2 ">
+                    <h6><a href="# " class="ft-tt ">با دیجی‌کالا</a></h6>
+                    <br>
+                    <a href="# ">اتاق خبر دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">فروش در دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">فرصت‌های شغلی</a>
+                    <br>
+                    <a href="# ">تماس با دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">درباره دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">راهنمای هویت بصری</a>
+                </div>
+
+                <div class="col-lg-6 ">
+                    <h6>از تخفیف‌ها و جدیدترین‌های دیجی‌کالا باخبر شوید:</h6>
+                    <form class="d-flex ">
+                        <input class="form-control ft-email " type="email " placeholder="آدرس ایمیل خود را وارد کنید " aria-label="email ">
+                        <button class="btn btn-outline-success ft-email-submit " type="submit ">ارسال</button>
+                    </form>
+                    <p class="so-li ">دیجی‌کالا را در شبکه‌های اجتماعی دنبال کنید:</p>
+                    <a href="# "><i class="fi-xnsux3-instagram ft-Social-Networks me-2 "></i></a>
+                    <a href="# "> <i class="fi-xnsux3-twitter ft-Social-Networks "></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container desktop-footer ">
+            <div class="row ">
+                <div class="col-6 text-end ">
+                    <p>هفت روز هفته ، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم</p>
+                </div>
+                <div class="col-2 ">
+                    <p>شماره تماس : <a href="# ">۶۱۹۳۰۰۰۰ - ۰۲۱</a> </p>
+                </div>
+                <div class="col-4 ">
+                    <p> آدرس ایمیل: <a href="# ">info@digikala.com</a></p>
+                </div>
+                <div class="col d-flex justify-content-center ">
+                    <a href="# "><img src="../multi shop/images/footer/سیب اپ.png " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "><img src="../multi shop/images/footer/مایکت.svg " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "><img src="../multi shop/images/footer/بازار.svg " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "> <img src="../multi shop/images/footer/گوگل پلی.png " alt=" " class="ft-ap "></a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid ft-bootem ">
+            <div class="row ">
+                <div class="col-8 ">
+                    <h6 class="mt-4 ">فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلاین</h6>
+                    <p class="ft-bootem-text "> .دیجی‌کالا به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با بیش از یک دهه تجربه، با پایبندی به سه اصل، پرداخت در محل، 7 روز ضمانت بازگشت کالا و تضمین اصل‌بودن کالا موفق شده تا همگام با فروشگاه‌های معتبر جهان، به بزرگ‌ترین فروشگاه
+                        اینترنتی ایران تبدیل شود. به محض ورود به سایت دیجی‌کالا با دنیایی از کالا رو به رو می‌شوید! هر آنچه که نیاز دارید و به ذهن شما خطور می‌کند در اینجا پیدا خواهید کرد<a href="# ">مشاهده بیشتر</a></p>
+                </div>
+                <div class="col-4 pt-3 ">
+                    <a href="# " class="ft-enamad-b "> <img src="../multi shop/images/footer/نشان ملی.png " alt=" " class="ft-enamad "></a>
+                    <a href="# " class="ft-enamad-b "><img src="../multi shop/images/footer/نماد الکترونیک.png " alt=" " class="ft-enamad "></a>
+                    <a href="# " class="ft-enamad-b "> <img src="../multi shop/images/footer/کسب و کار مجاز.png " alt=" " class="ft-enamad "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/1.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/2.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/3.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/4.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/5.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/6.svg " alt=" "></a>
+                </div>
+            </div>
+        </div>
+        <!--mobile footer-->
+        <div class="container-fluid m-links mb-3 ">
+            <div class="row pb-3 ">
+                <p class="so-li ">ما را در شبکه های اجتماعی دنبال کنید</p>
+                <button class="btn btn-insta "><i class="fi-xnsuxx-instagram me-2 "></i>  اینستاگرام فروشگاه</button>
+            </div>
+            <div class="row ">
+                <div class="col-6 ">
+                    <ul class="list-unstyled text-center text-muted ">
+                        <li><a href="# "><small>نحوه ثبت سفارش</small></a></li>
+                        <li><a href="# "><small>راهنما</small></a></li>
+                        <li><a href="# "><small>درباره ما</small></a></li>
+                        <li><a href="# "><small>اینفوگرافی</small></a></li>
+                        <li><a href="# "><small>گزارش باگ</small></a></li>
+                        <li><a href="# "><small>تماس با ما</small></a></li>
+
+                    </ul>
+                </div>
+                <div class="col-6 ">
+                    <ul class="list-unstyled text-center text-muted ">
+                        <li><a href="# "><small>فروش در سایت</small></a></li>
+                        <li><a href="# "><small>فرصت های شغلی</small></a></li>
+                        <li><a href="# "><small>سوالات متداول</small></a></li>
+                        <li><a href="# "><small>دانلود اپلیکیشن</small></a></li>
+                        <li><a href="# "><small>شرایط استفاده</small></a></li>
+                        <li><a href="# "><small>حریم خصوصی</small></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <h6 class="ft-about-tt text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h6>
+                <p class="ft-about ">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،<span id="dots">...</span><span id="more"> و برای شرایط فعلی تکنولوژی مورد
+                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی،
+                و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                اساسا مورد استفاده قرار گیرد.</span>
+                </p>
+                <div class="dots"></div>
+                <button onclick="myFunction() " id="myBtn" class="more-btn btn">نمایش بیشتر </button>
+            </div>
+
+            <hr class="ft-hr ">
+            <p class="cpr mb-0 "><small>کلیه حقوق این سایت متعلق</small></p>
+            <p class="cpr pb-2 "><small>به شرکت ...................(سایت فروشگاهی) می باشد</small></p>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>
