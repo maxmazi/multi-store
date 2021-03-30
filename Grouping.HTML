@@ -1,0 +1,1363 @@
+<!doctype html>
+<html lang="fa">
+
+<head>
+    <title>سایت چند فروشگاهی</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/fav.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.rtl.min.css" integrity="sha384-4dNpRvNX0c/TdYEbYup8qbjvjaMrgUPh+g4I03CnNtANuv+VAvPL6LqdwzZKV38G" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bootstrap-utilities.rtl.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.rtl.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav-style.css">
+    <link rel="stylesheet" href="css/cat-style.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <!--navbar-->
+    <div class="container-fluid desktop-nav">
+        <div class="row justify-content-between">
+            <nav class="navbar navbar-light bg-custom px-5 py-4">
+                <div class="container-fluid">
+                    <form class="d-flex col-lg-8">
+                        <a class="navbar-brand me-5 my-auto" href="index.html">LOGO</a>
+                        <input class="form-control me-2 search-form" type="search" placeholder="جستجو در کالاها" aria-label="Search">
+                    </form>
+                    <div class="utilities col-lg-4 d-flex flex-row-reverse my-auto">
+                        <div class="nav-link cart ps-3 py-1"><i class="fi-xnluhx-shopping-cart"></i></div>
+                        <div class="nav-link dropdown-toggle pe-3 user py-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fi-xnluxx-user"></i>
+                        </div>
+                        <ul class="dropdown-menu user-drop" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row justify-content-between">
+            <nav class="navbar navbar-expand-lg navbar-light bg-custom px-5">
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link active me-2 item" aria-current="page" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fi-xnsuxl-three-bars-solid"></i>دسته بندی کالاها</a>
+                                <ul class="dropdown-menu megamenu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link item" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link item" href="#">Pricing</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!--mobile nav-->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "70%";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.style.backgroundColor = "#f5f5f5";
+        }
+    </script>
+
+    <div class="navbar mob-nav p-2 mobile-nav m-bg d-flex">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-menu" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size:21px;cursor:pointer;padding-right:15px;">
+                &#9776;
+      </button>
+        <a class="navbar-brand" href="index.html">LOGO</a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog m-modal">
+                <div class="modal-content m-modal-dialog">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-nav row justify-content-between">
+            <nav class="navbar navbar-light bg-custom px-lg-5 py-lg-4 p-xs-0 p-sm-0">
+                <div class="container-fluid mobile-cf">
+                    <form class="d-flex col-lg-8 col-7">
+                        <input class="w-100 mobile-search form-control me-2 search-form" type="search" placeholder="جستجو" aria-label="Search">
+                    </form>
+                    <div class="utilities col-lg-4 col-5 d-flex flex-row-reverse my-auto">
+                        <div class="nav-link cart ps-1 py-1" href="#" role="button"><i class="fi-xwsuhl-shopping-cart"></i></div>
+                        <div class="nav-link pe-2 user py-1" href="#" role="button"><i class="fi-xnsuxl-user"></i></div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--bttb-->
+    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+        width="18" height="18"
+        viewBox="0 0 172 172"
+        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#666666"><path d="M85.91042,51.6c-1.48937,0.02375 -2.91104,0.62615 -3.96406,1.67969l-57.33333,57.33333c-1.49776,1.43802 -2.1011,3.57339 -1.57731,5.58258c0.52378,2.00919 2.09283,3.57824 4.10202,4.10202c2.00919,0.52378 4.14456,-0.07955 5.58258,-1.57732l53.27969,-53.27969l53.27969,53.27969c1.43802,1.49778 3.5734,2.10113 5.5826,1.57735c2.0092,-0.52378 3.57826,-2.09284 4.10204,-4.10204c0.52378,-2.0092 -0.07957,-4.14458 -1.57735,-5.5826l-57.33333,-57.33333c-1.09692,-1.09743 -2.59177,-1.70345 -4.14323,-1.67969z"></path></g></g></svg></a>
+
+
+    <!--side-->
+
+    <div class="cst-con">
+        <div class="row ">
+            <div class="col-3 text-center filter">
+                <div class="col Side-filter row ">
+                    <div class="col-9 Filter all-filter">
+                        <p>فیلتر های اعمال شده</p>
+                    </div>
+                    <div class="col-3 Filter filter-Delete">
+                        <a href="#">حذف</a>
+                    </div>
+                    <div class="c-listing pt-2">
+                        <ul class="list-unstyled">
+                            <li>
+                                <div class="c-listing-options__label">
+                                    <button id="remove-filter-search-list-item" class="remove-btn" data-snt-event="" data-snt-params="" type="button" data-key="" data-value=""></button>
+                                    <span>سامسونگ</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col Side-filter row ">
+
+                    <div class="col Filter all-filter">
+                        <p>دسته بندی نتایج</p>
+                    </div>
+                    <div class="c-filter c-filter--catalog js-box-content">
+                        <div class=" js-box-content-items">
+                            <div class="c-catalog">
+                                <ul class="c-catalog__list--depth js-catalog-list list-unstyled">
+                                    <li class="c-catalog__cat-item ">
+                                        <span class="c-catalog__cat-item c-catalog__cat-item--arrow-left d-flex justify-content-start">
+                                            <a class="c-catalog__link " data-snt-event="" data-snt-params="" href="">کالای دیجیتال</a>
+                                        </span>
+                                        <div class="show-more">
+                                            <ul class="c-catalog__list--depth list-unstyled">
+                                                <li class="c-catalog__cat-item ">
+                                                    <span class="c-catalog__cat-item c-catalog__cat-item--arrow-down d-flex justify-content-start">
+                                                        <a class="c-catalog__link " data-snt-event="" data-snt-params="" href="">موبایل</a>
+                                                    </span>
+                                                    <div class=" show-more">
+                                                        <ul class="list-unstyled">
+                                                            <li class="c-catalog__cat-item">
+                                                                <a class="list-det c-catalog__link d-flex justify-content-start" data-snt-event="" data-snt-params="" href="">گوشی موبایل</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card Side-filter">
+                    <div class="all-filter">
+                        <h6 class="s-title">جستجو در نتایج:</h6>
+                    </div>
+                    <div class="card-body side-search">
+                        <form class="d-flex">
+                            <span aria-hidden="true"><i class="fi-xnluhx-magnifying-glass"></i></span>
+                            <input class="form-control s-search-form" type="search" placeholder="       نام محصول یا برند مورد نظر را بنویسید..." aria-label="Search">
+                        </form>
+                    </div>
+                </div>
+                <div class="accordion" id="seller">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSeller">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeller" aria-expanded="true" aria-controls="collapseSeller">
+                                فروشنده
+                        </button>
+                        </h2>
+                        <div id="collapseSeller" class="accordion-collapse collapse show" aria-labelledby="headingSeller" data-bs-parent="#seller">
+                            <div class="accordion-body">
+                                <div class="form-check d-flex">
+                                    <input class="form-check-input" type="checkbox" value="" id="check1">
+                                    <label class="form-check-label ps-2" for="check1" style="font-size: 12px; color:#474747;">
+                                      فروشگاه
+                                    </label>
+                                </div>
+                                <div class="form-check d-flex">
+                                    <input class="form-check-input" type="checkbox" value="" id="check2" checked>
+                                    <label class="form-check-label ps-2" for="check2" style="font-size: 12px; color:#474747;">
+                                      فروشنده برگزیده
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exict mt-2 p-3 p-md-1">
+                    <div class="form-check form-switch d-flex">
+                        <input class="form-check-input switch" type="checkbox" id="flexSwitchCheckDefault">
+                        <label class="form-check-label ms-2" for="flexSwitchCheckDefault" style="font-size: 14px; color: #474747;">فقط کالاهای موجود</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <!--products-->
+            <div class="col-lg-9 col-12 row product-g">
+                <p class="blockquote-footer">
+                    فروشگاه اینترنتی سالمد / کالای دیجیتال / موبایل / گوشی موبایل
+                </p>
+                <div class="Filter-g">
+                    <ul class="col-7 col-md-12 row list-unstyled" onclick="focusClass(event)">
+                        <li class="icon-Filter"><i class="fi-xtluxl-three-bars-thin"></i></li>
+                        <li class="col-2 Filter">
+                            <p class=" Filter Filter-Title">مرتب سازی:</p>
+                        </li>
+                        <li class="col Filter">
+                            <a href="file:///D:/multi%20shop/Grouping.HTML" id="Filter-f" class="btn Filter active">پرفروش ترین</a>
+                        </li>
+                        <li class="col Filter">
+                            <a href="#" id="Filter-m" class="btn Filter">مرتبط‌ ترین</a>
+                        </li>
+                        <li class="col Filter">
+                            <a href="#" id="Filter-b" class="btn Filter">پربازدید ترین</a>
+                        </li>
+                        <li class="col Filter">
+                            <a href="#" id="Filter-j" class="btn Filter">جدید ترین</a>
+                        </li>
+                        <li class="col Filter">
+                            <a href="#" id="Filter-a" class="btn Filter">ارزان ترین</a>
+                        </li>
+                        <li class="col Filter">
+                            <a href="#" id="Filter-g" class="btn Filter">گران ترین</a>
+                        </li>
+                    </ul>
+                    <div class="col-5"></div>
+                </div>
+                <div class="card col-3 col-lg-3 product">
+                    <img src="../multi shop/images/m4.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">مقایسه</label>
+                        </div>
+
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت</p>
+                        <p class="card-text stock">
+                            <small class="text-muted"> 
+                                <span class="Score"> <span class="Score-number"> 4.2 </span><i class="fi-xnsuxl-star-solid"></i></span> 
+                            </small>
+                        </p>
+                    </div>
+                    <div class="vari">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #40aaff;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ff66ba;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer row  unavailable-footer">
+
+                        <div class="line-unavailable col">
+                            <hr>
+                        </div>
+                        <p class="unavailable col">ناموجود</p>
+                        <div class="line-unavailable col">
+                            <hr>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card col-3 col-lg-3 product">
+                    <img src="../multi shop/images/m1.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                مقایسه
+              </label>
+                        </div>
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت
+                        </p>
+                        <p class="card-text stock"><small class="text-muted"> <i class="fi-xnsuhl-hard-floppy"></i>موجود در انبار <span
+                  class="Score"> <span class="Score-number"> 4.2 </span><i
+                    class="fi-xnsuxl-star-solid"></i></span></small></p>
+                    </div>
+
+                    <div class="vari">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #40aaff;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ff66ba;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="Price"><span class="price-product">4.119.000</span><span class="currency">تومان</span> </p>
+                    </div>
+
+                    <div class="card-footer  footer-card ">
+                        <p class="seller"><img src="../multi shop/images/icon/shop.svg" alt="" class="icon-shop">فروشنده: میم اکسسوری
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-3 col-lg-3 product">
+                    <img src="../multi shop/images/m2.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                مقایسه
+              </label>
+                        </div>
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت
+                        </p>
+                        <p class="card-text stock"><small class="text-muted"> <i class="fi-xnsuhl-hard-floppy"></i>موجود در انبار <span
+                  class="Score"> <span class="Score-number"> 4.2 </span><i
+                    class="fi-xnsuxl-star-solid"></i></span></small></p>
+                    </div>
+
+                    <div class="vari">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1 c-white" style="background-color: #ffffff;border: 1px solid rgb(165, 165, 165);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ca1010;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #202020;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p">
+                        <p class="Price"><span class="price-product">4.119.000</span><span class="currency">تومان</span> </p>
+                    </div>
+                    <div class="card-footer  footer-card ">
+                        <p class="seller"><img src="../multi shop/images/icon/shop.svg" alt="" class="icon-shop">فروشنده: میم اکسسوری
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-3 col-lg-3 product">
+                    <p class="special-sale">فروش ویژه</p>
+                    <img src="../multi shop/images/m3.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                مقایسه
+              </label>
+                        </div>
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت
+                        </p>
+                        <p class="card-text stock"><small class="text-muted"> <i class="fi-xnsuhl-hard-floppy"></i>موجود در انبار <span
+                  class="Score"> <span class="Score-number"> 4.2 </span><i
+                    class="fi-xnsuxl-star-solid"></i></span></small></p>
+                    </div>
+                    <div class="vari-off">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1 c-white" style="background-color: #ffffff;border: 1px solid rgb(165, 165, 165);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ca1010;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #202020;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center" style="width: 10px; height: 10px; border-radius: 50%; color: #999999; font-size: 14px;">+
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="price-off"><span class="off">%5</span><del class="Initial-price">4.300.000</del></p>
+                        <p class="off-Price"><span class="price-product">4.119.000</span><span class="currency">تومان</span> </p>
+
+
+                    </div>
+                    <div class="card-footer  footer-card ">
+                        <p class="seller"><img src="../multi shop/images/icon/shop.svg" alt="" class="icon-shop">فروشنده: میم اکسسوری
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-3 col-lg-3 product">
+                    <img src="../multi shop/images/m4.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">مقایسه</label>
+                        </div>
+
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت</p>
+                        <p class="card-text stock">
+                            <small class="text-muted"> 
+                                <span class="Score"> <span class="Score-number"> 4.2 </span><i class="fi-xnsuxl-star-solid"></i></span> 
+                            </small>
+                        </p>
+                    </div>
+                    <div class="vari">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #40aaff;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ff66ba;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer row  unavailable-footer">
+
+                        <div class="line-unavailable col">
+                            <hr>
+                        </div>
+                        <p class="unavailable col">ناموجود</p>
+                        <div class="line-unavailable col">
+                            <hr>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card col-3 col-lg-3 product">
+                    <img src="../multi shop/images/m1.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                مقایسه
+              </label>
+                        </div>
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت
+                        </p>
+                        <p class="card-text stock"><small class="text-muted"> <i class="fi-xnsuhl-hard-floppy"></i>موجود در انبار <span
+                  class="Score"> <span class="Score-number"> 4.2 </span><i
+                    class="fi-xnsuxl-star-solid"></i></span></small></p>
+                    </div>
+
+                    <div class="vari">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #40aaff;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ff66ba;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="Price"><span class="price-product">4.119.000</span><span class="currency">تومان</span> </p>
+                    </div>
+
+                    <div class="card-footer  footer-card ">
+                        <p class="seller"><img src="../multi shop/images/icon/shop.svg" alt="" class="icon-shop">فروشنده: میم اکسسوری
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-3 col-lg-3 product">
+                    <img src="../multi shop/images/m2.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                مقایسه
+              </label>
+                        </div>
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت
+                        </p>
+                        <p class="card-text stock"><small class="text-muted"> <i class="fi-xnsuhl-hard-floppy"></i>موجود در انبار <span
+                  class="Score"> <span class="Score-number"> 4.2 </span><i
+                    class="fi-xnsuxl-star-solid"></i></span></small></p>
+                    </div>
+
+                    <div class="vari">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1 c-white" style="background-color: #ffffff;border: 1px solid rgb(165, 165, 165);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ca1010;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #202020;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p">
+                        <p class="Price"><span class="price-product">4.119.000</span><span class="currency">تومان</span> </p>
+                    </div>
+                    <div class="card-footer  footer-card ">
+                        <p class="seller"><img src="../multi shop/images/icon/shop.svg" alt="" class="icon-shop">فروشنده: میم اکسسوری
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-3 col-lg-3 product">
+                    <p class="special-sale">فروش ویژه</p>
+                    <img src="../multi shop/images/m3.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                مقایسه
+              </label>
+                        </div>
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت
+                        </p>
+                        <p class="card-text stock"><small class="text-muted"> <i class="fi-xnsuhl-hard-floppy"></i>موجود در انبار <span
+                  class="Score"> <span class="Score-number"> 4.2 </span><i
+                    class="fi-xnsuxl-star-solid"></i></span></small></p>
+                    </div>
+                    <div class="vari-off">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1 c-white" style="background-color: #ffffff;border: 1px solid rgb(165, 165, 165);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ca1010;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #202020;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center" style="width: 10px; height: 10px; border-radius: 50%; color: #999999; font-size: 14px;">+
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="price-off"><span class="off">%5</span><del class="Initial-price">4.300.000</del></p>
+                        <p class="off-Price"><span class="price-product">4.119.000</span><span class="currency">تومان</span> </p>
+
+
+                    </div>
+                    <div class="card-footer  footer-card ">
+                        <p class="seller"><img src="../multi shop/images/icon/shop.svg" alt="" class="icon-shop">فروشنده: میم اکسسوری
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-3 col-lg-3 product">
+                    <img src="../multi shop/images/m4.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">مقایسه</label>
+                        </div>
+
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت</p>
+                        <p class="card-text stock">
+                            <small class="text-muted"> 
+                                <span class="Score"> <span class="Score-number"> 4.2 </span><i class="fi-xnsuxl-star-solid"></i></span> 
+                            </small>
+                        </p>
+                    </div>
+                    <div class="vari">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #40aaff;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ff66ba;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer row  unavailable-footer">
+
+                        <div class="line-unavailable col">
+                            <hr>
+                        </div>
+                        <p class="unavailable col">ناموجود</p>
+                        <div class="line-unavailable col">
+                            <hr>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card col-3 col-lg-3 product">
+                    <img src="../multi shop/images/m1.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                مقایسه
+              </label>
+                        </div>
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت
+                        </p>
+                        <p class="card-text stock"><small class="text-muted"> <i class="fi-xnsuhl-hard-floppy"></i>موجود در انبار <span
+                  class="Score"> <span class="Score-number"> 4.2 </span><i
+                    class="fi-xnsuxl-star-solid"></i></span></small></p>
+                    </div>
+
+                    <div class="vari">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #40aaff;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ff66ba;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="Price"><span class="price-product">4.119.000</span><span class="currency">تومان</span> </p>
+                    </div>
+
+                    <div class="card-footer  footer-card ">
+                        <p class="seller"><img src="../multi shop/images/icon/shop.svg" alt="" class="icon-shop">فروشنده: میم اکسسوری
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-3 col-lg-3 product">
+                    <img src="../multi shop/images/m2.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                مقایسه
+              </label>
+                        </div>
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت
+                        </p>
+                        <p class="card-text stock"><small class="text-muted"> <i class="fi-xnsuhl-hard-floppy"></i>موجود در انبار <span
+                  class="Score"> <span class="Score-number"> 4.2 </span><i
+                    class="fi-xnsuxl-star-solid"></i></span></small></p>
+                    </div>
+
+                    <div class="vari">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1 c-white" style="background-color: #ffffff;border: 1px solid rgb(165, 165, 165);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ca1010;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #202020;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p">
+                        <p class="Price"><span class="price-product">4.119.000</span><span class="currency">تومان</span> </p>
+                    </div>
+                    <div class="card-footer  footer-card ">
+                        <p class="seller"><img src="../multi shop/images/icon/shop.svg" alt="" class="icon-shop">فروشنده: میم اکسسوری
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-3 col-lg-3 product">
+                    <p class="special-sale">فروش ویژه</p>
+                    <img src="../multi shop/images/m3.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                مقایسه
+              </label>
+                        </div>
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت
+                        </p>
+                        <p class="card-text stock"><small class="text-muted"> <i class="fi-xnsuhl-hard-floppy"></i>موجود در انبار <span
+                  class="Score"> <span class="Score-number"> 4.2 </span><i
+                    class="fi-xnsuxl-star-solid"></i></span></small></p>
+                    </div>
+                    <div class="vari-off">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1 c-white" style="background-color: #ffffff;border: 1px solid rgb(165, 165, 165);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ca1010;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #202020;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center" style="width: 10px; height: 10px; border-radius: 50%; color: #999999; font-size: 14px;">+
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="price-off"><span class="off">%5</span><del class="Initial-price">4.300.000</del></p>
+                        <p class="off-Price"><span class="price-product">4.119.000</span><span class="currency">تومان</span> </p>
+
+
+                    </div>
+                    <div class="card-footer  footer-card ">
+                        <p class="seller"><img src="../multi shop/images/icon/shop.svg" alt="" class="icon-shop">فروشنده: میم اکسسوری
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-3 col-lg-3 product">
+                    <img src="../multi shop/images/m4.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">مقایسه</label>
+                        </div>
+
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت</p>
+                        <p class="card-text stock">
+                            <small class="text-muted"> 
+                                <span class="Score"> <span class="Score-number"> 4.2 </span><i class="fi-xnsuxl-star-solid"></i></span> 
+                            </small>
+                        </p>
+                    </div>
+                    <div class="vari">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #40aaff;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ff66ba;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer row  unavailable-footer">
+
+                        <div class="line-unavailable col">
+                            <hr>
+                        </div>
+                        <p class="unavailable col">ناموجود</p>
+                        <div class="line-unavailable col">
+                            <hr>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card col-3 col-lg-3 product">
+                    <img src="../multi shop/images/m1.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                مقایسه
+              </label>
+                        </div>
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت
+                        </p>
+                        <p class="card-text stock"><small class="text-muted"> <i class="fi-xnsuhl-hard-floppy"></i>موجود در انبار <span
+                  class="Score"> <span class="Score-number"> 4.2 </span><i
+                    class="fi-xnsuxl-star-solid"></i></span></small></p>
+                    </div>
+
+                    <div class="vari">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #40aaff;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ff66ba;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="Price"><span class="price-product">4.119.000</span><span class="currency">تومان</span> </p>
+                    </div>
+
+                    <div class="card-footer  footer-card ">
+                        <p class="seller"><img src="../multi shop/images/icon/shop.svg" alt="" class="icon-shop">فروشنده: میم اکسسوری
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-3 col-lg-3 product">
+                    <img src="../multi shop/images/m2.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                مقایسه
+              </label>
+                        </div>
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت
+                        </p>
+                        <p class="card-text stock"><small class="text-muted"> <i class="fi-xnsuhl-hard-floppy"></i>موجود در انبار <span
+                  class="Score"> <span class="Score-number"> 4.2 </span><i
+                    class="fi-xnsuxl-star-solid"></i></span></small></p>
+                    </div>
+
+                    <div class="vari">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1 c-white" style="background-color: #ffffff;border: 1px solid rgb(165, 165, 165);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ca1010;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #202020;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p">
+                        <p class="Price"><span class="price-product">4.119.000</span><span class="currency">تومان</span> </p>
+                    </div>
+                    <div class="card-footer  footer-card ">
+                        <p class="seller"><img src="../multi shop/images/icon/shop.svg" alt="" class="icon-shop">فروشنده: میم اکسسوری
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-3 col-lg-3 product">
+                    <p class="special-sale">فروش ویژه</p>
+                    <img src="../multi shop/images/m3.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <div class="form-check Comparison">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                مقایسه
+              </label>
+                        </div>
+                        <p class="card-text text-product">گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS دو سیم کارت ظرفیت 128 گیگابایت
+                        </p>
+                        <p class="card-text stock"><small class="text-muted"> <i class="fi-xnsuhl-hard-floppy"></i>موجود در انبار <span
+                  class="Score"> <span class="Score-number"> 4.2 </span><i
+                    class="fi-xnsuxl-star-solid"></i></span></small></p>
+                    </div>
+                    <div class="vari-off">
+                        <ul class="vc" data-title="رنگ ها">
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1 c-white" style="background-color: #ffffff;border: 1px solid rgb(165, 165, 165);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #ca1010;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center">
+                                <span class="color-1" style="background-color: #202020;border: 1px solid rgb(233, 233, 233);"></span>
+                            </li>
+                            <li class="color-var d-flex align-items-center justify-content-center" style="width: 10px; height: 10px; border-radius: 50%; color: #999999; font-size: 14px;">+
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="price-off"><span class="off">%5</span><del class="Initial-price">4.300.000</del></p>
+                        <p class="off-Price"><span class="price-product">4.119.000</span><span class="currency">تومان</span> </p>
+
+
+                    </div>
+                    <div class="card-footer  footer-card ">
+                        <p class="seller"><img src="../multi shop/images/icon/shop.svg" alt="" class="icon-shop">فروشنده: میم اکسسوری
+                        </p>
+                    </div>
+                </div>
+                <!--end-->
+
+                <div class="row col Paging">
+
+                    <nav aria-label="...">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link back " href="#" tabindex="-1" aria-disabled="true"><i class="fi-xnsrxl-double-chevron-solid me-2 pe-3"></i></a>
+                            </li>
+                            <li class="page-item ms-4 px-2"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item px-2" aria-current="page">
+                                <a class="page-link p-active" href="#">2</a>
+                            </li>
+                            <li class="page-item"><a class="page-link me-4 px-3" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link next" href="#"><i class="fi-xnslxl-double-chevron-solid ms-2 px-3"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    </div>
+
+
+    <!--mobile filter-->
+
+    <div class="container-fluid ads pb-3">
+        <div class="row">
+            <div class="d-flex">
+                <div class="ad-search px-2" type="button" data-bs-toggle="modal" data-bs-target="#advSearch">
+                    <p class="ads-txt"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="original-icon" fill="#808080"><path d="M116.45833,21.5c-6.12153,0 -11.39327,2.4891 -14.76725,6.28483c-2.0936,2.35531 -3.26481,5.15 -4.02425,8.0485h-77.95849c-1.93842,-0.02741 -3.74144,0.99102 -4.71865,2.66532c-0.97721,1.6743 -0.97721,3.74507 0,5.41937c0.97721,1.6743 2.78023,2.69273 4.71865,2.66532h77.95849c0.75944,2.8985 1.93065,5.6932 4.02425,8.0485c3.37398,3.79573 8.64573,6.28483 14.76725,6.28483c6.12153,0 11.39327,-2.4891 14.76725,-6.28483c2.0936,-2.35531 3.26481,-5.15 4.02425,-8.0485h17.04183c1.93842,0.02741 3.74144,-0.99102 4.71865,-2.66532c0.97721,-1.6743 0.97721,-3.74507 0,-5.41937c-0.97721,-1.6743 -2.78023,-2.69273 -4.71865,-2.66532h-17.04183c-0.75944,-2.8985 -1.93065,-5.6932 -4.02425,-8.0485c-3.37398,-3.79573 -8.64573,-6.28483 -14.76725,-6.28483zM116.45833,32.25c3.43403,0 5.32895,1.09423 6.73275,2.6735c1.4038,1.57927 2.22559,3.89594 2.22559,6.28483c0,2.38889 -0.82179,4.70556 -2.22559,6.28483c-1.4038,1.57927 -3.29872,2.6735 -6.73275,2.6735c-3.43403,0 -5.32895,-1.09423 -6.73275,-2.6735c-1.4038,-1.57927 -2.22559,-3.89594 -2.22559,-6.28483c0,-2.38889 0.82179,-4.70556 2.22559,-6.28483c1.4038,-1.57927 3.29872,-2.6735 6.73275,-2.6735zM55.54167,66.29167c-6.12153,0 -11.39327,2.4891 -14.76725,6.28483c-2.0936,2.35531 -3.26481,5.15 -4.02425,8.0485h-17.04183c-1.93842,-0.02741 -3.74144,0.99102 -4.71865,2.66532c-0.97721,1.6743 -0.97721,3.74507 0,5.41937c0.97721,1.6743 2.78023,2.69273 4.71865,2.66532h17.04183c0.75944,2.8985 1.93065,5.6932 4.02425,8.0485c3.37398,3.79573 8.64573,6.28483 14.76725,6.28483c6.12153,0 11.39327,-2.4891 14.76725,-6.28483c2.0936,-2.35531 3.26481,-5.15 4.02425,-8.0485h77.95849c1.93842,0.02741 3.74144,-0.99102 4.71865,-2.66532c0.97721,-1.6743 0.97721,-3.74507 0,-5.41937c-0.97721,-1.6743 -2.78023,-2.69273 -4.71865,-2.66532h-77.95849c-0.75944,-2.8985 -1.93065,-5.6932 -4.02425,-8.0485c-3.37398,-3.79573 -8.64573,-6.28483 -14.76725,-6.28483zM55.54167,77.04167c3.43403,0 5.32895,1.09423 6.73275,2.6735c1.4038,1.57927 2.22559,3.89594 2.22559,6.28483c0,2.38889 -0.82179,4.70556 -2.22559,6.28483c-1.4038,1.57927 -3.29872,2.6735 -6.73275,2.6735c-3.43403,0 -5.32895,-1.09423 -6.73275,-2.6735c-1.4038,-1.57927 -2.22559,-3.89594 -2.22559,-6.28483c0,-2.38889 0.82179,-4.70556 2.22559,-6.28483c1.4038,-1.57927 3.29872,-2.6735 6.73275,-2.6735zM109.29167,111.08333c-6.12153,0 -11.39327,2.4891 -14.76725,6.28483c-2.0936,2.35531 -3.26481,5.15 -4.02425,8.0485h-70.79183c-1.93842,-0.02741 -3.74144,0.99102 -4.71865,2.66532c-0.97721,1.6743 -0.97721,3.74507 0,5.41937c0.97721,1.6743 2.78023,2.69273 4.71865,2.66532h70.79183c0.75944,2.8985 1.93065,5.6932 4.02425,8.0485c3.37398,3.79573 8.64573,6.28483 14.76725,6.28483c6.12153,0 11.39327,-2.4891 14.76725,-6.28483c2.0936,-2.35531 3.26481,-5.15 4.02425,-8.0485h24.20849c1.93842,0.02741 3.74144,-0.99102 4.71865,-2.66532c0.97721,-1.6743 0.97721,-3.74507 0,-5.41937c-0.97721,-1.6743 -2.78023,-2.69273 -4.71865,-2.66532h-24.20849c-0.75944,-2.8985 -1.93065,-5.6932 -4.02425,-8.0485c-3.37398,-3.79573 -8.64573,-6.28483 -14.76725,-6.28483zM109.29167,121.83333c3.43403,0 5.32895,1.09423 6.73275,2.6735c1.4038,1.57927 2.22559,3.89594 2.22559,6.28483c0,2.38889 -0.82179,4.70556 -2.22559,6.28483c-1.4038,1.57927 -3.29872,2.6735 -6.73275,2.6735c-3.43403,0 -5.32895,-1.09423 -6.73275,-2.6735c-1.4038,-1.57927 -2.22559,-3.89594 -2.22559,-6.28483c0,-2.38889 0.82179,-4.70556 2.22559,-6.28483c1.4038,-1.57927 3.29872,-2.6735 6.73275,-2.6735z"></path></g></g></svg>                        جستجوی پیشرفته </p>
+                </div>
+                <div class="ad-search ms-3 px-2" type="button" data-bs-toggle="modal" data-bs-target="#sortOrder">
+                    <p class="ads-txt"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#666666"><path d="M26.875,25.08333c-1.93842,-0.02741 -3.74144,0.99102 -4.71865,2.66532c-0.97721,1.6743 -0.97721,3.74507 0,5.41937c0.97721,1.6743 2.78023,2.69273 4.71865,2.66532h68.08333c1.93842,0.02741 3.74144,-0.99102 4.71865,-2.66532c0.97721,-1.6743 0.97721,-3.74507 0,-5.41937c-0.97721,-1.6743 -2.78023,-2.69273 -4.71865,-2.66532zM119.96468,48.375c-1.39872,0.02045 -2.73437,0.58534 -3.72331,1.57471l-25.08333,25.08333c-1.40412,1.34815 -1.96971,3.35005 -1.47866,5.23364c0.49105,1.88359 1.96202,3.35456 3.84561,3.84561c1.88359,0.49105 3.88549,-0.07455 5.23364,-1.47866l15.90804,-15.90804v78.39941c-0.02741,1.93842 0.99102,3.74144 2.66532,4.71865c1.6743,0.97721 3.74507,0.97721 5.41937,0c1.6743,-0.97721 2.69273,-2.78023 2.66532,-4.71865v-78.39941l15.90804,15.90804c1.34815,1.40412 3.35005,1.96971 5.23364,1.47866c1.88359,-0.49105 3.35456,-1.96202 3.84561,-3.84561c0.49105,-1.88359 -0.07455,-3.88549 -1.47866,-5.23364l-25.08333,-25.08333c-1.02666,-1.02708 -2.4252,-1.59508 -3.87728,-1.57471zM26.875,53.75c-1.93842,-0.02741 -3.74144,0.99102 -4.71865,2.66532c-0.97721,1.6743 -0.97721,3.74507 0,5.41937c0.97721,1.6743 2.78023,2.69273 4.71865,2.66532h53.75c1.93842,0.02741 3.74144,-0.99102 4.71865,-2.66532c0.97721,-1.6743 0.97721,-3.74507 0,-5.41937c-0.97721,-1.6743 -2.78023,-2.69273 -4.71865,-2.66532zM26.875,82.41667c-1.93842,-0.02741 -3.74144,0.99102 -4.71865,2.66532c-0.97721,1.6743 -0.97721,3.74507 0,5.41937c0.97721,1.6743 2.78023,2.69273 4.71865,2.66532h39.41667c1.93842,0.02741 3.74144,-0.99102 4.71865,-2.66532c0.97721,-1.6743 0.97721,-3.74507 0,-5.41937c-0.97721,-1.6743 -2.78023,-2.69273 -4.71865,-2.66532zM26.875,111.08333c-1.93842,-0.02741 -3.74144,0.99102 -4.71865,2.66532c-0.97721,1.6743 -0.97721,3.74507 0,5.41937c0.97721,1.6743 2.78023,2.69273 4.71865,2.66532h25.08333c1.93842,0.02741 3.74144,-0.99102 4.71865,-2.66532c0.97721,-1.6743 0.97721,-3.74507 0,-5.41937c-0.97721,-1.6743 -2.78023,-2.69273 -4.71865,-2.66532zM26.875,139.75c-1.93842,-0.02741 -3.74144,0.99102 -4.71865,2.66532c-0.97721,1.6743 -0.97721,3.74507 0,5.41937c0.97721,1.6743 2.78023,2.69273 4.71865,2.66532h10.75c1.93842,0.02741 3.74144,-0.99102 4.71865,-2.66532c0.97721,-1.6743 0.97721,-3.74507 0,-5.41937c-0.97721,-1.6743 -2.78023,-2.69273 -4.71865,-2.66532z"></path></g></g></svg>                        مرتبط ترین </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal fade" id="advSearch" tabindex="-1" aria-labelledby="mobileAdvSearch" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-md-down">
+                <div class="modal-content">
+                    <div class="modal-header ad-head">
+                        <h5 class="modal-title ad-head" id="mobileAdvSearch">جستجوی پیشرفته</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ad-body">
+                        <div class="bg-white">
+                            <form>
+                                <label for="exampleDataList" class="form-label">جستجو در نتایج</label>
+                                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="نام محصول مورد نظر را بنویسید...">
+                                <datalist id="datalistOptions">
+                                    <option value="1">
+                                    <option value="2">
+                                    <option value="3">
+                                    <option value="4">
+                                    <option value="5">
+                                </datalist>
+                            </form>
+                        </div>
+                        <div class="bg-white mt-2">
+                            <div class="form-check form-switch d-flex adcheck">
+                                <input class="form-check-input switch" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label ms-2" for="flexSwitchCheckDefault">فقط کالاهای موجود</label>
+                            </div>
+                        </div>
+
+                        <div class="accordion bg-white mt-1" id="resultAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="resultsShow">
+                                    <button class="res-acc accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#resultsShowCollapse" aria-expanded="false" aria-controls="resultsShowCollapse">
+                                    دسته بندی نتایج
+                                  </button>
+                                </h2>
+                                <div id="resultsShowCollapse" class="accordion-collapse collapse" aria-labelledby="resultsShow" data-bs-parent="#resultAccordion">
+                                    <div class="px-1">
+                                        <hr>
+                                    </div>
+                                    <div class=" js-box-content-items">
+                                        <div class="c-catalog">
+                                            <ul class="c-catalog__list--depth js-catalog-list list-unstyled">
+                                                <li class="c-catalog__cat-item ">
+                                                    <span class="c-catalog__cat-item c-catalog__cat-item--arrow-left d-flex justify-content-start">
+                                                        <a class="c-catalog__link " data-snt-event="" data-snt-params="" href="">کالای دیجیتال</a>
+                                                    </span>
+                                                    <div class="show-more">
+                                                        <ul class="c-catalog__list--depth list-unstyled">
+                                                            <li class="c-catalog__cat-item ">
+                                                                <span class="c-catalog__cat-item c-catalog__cat-item--arrow-down d-flex justify-content-start">
+                                                                    <a class="c-catalog__link " data-snt-event="" data-snt-params="" href="">موبایل</a>
+                                                                </span>
+                                                                <div class=" show-more">
+                                                                    <ul class="list-unstyled">
+                                                                        <li class="c-catalog__cat-item">
+                                                                            <a class="list-det c-catalog__link d-flex justify-content-start" data-snt-event="" data-snt-params="" href="">گوشی موبایل</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion bg-white mt-1" id="priceAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="showRange"><button class="res-acc accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#showRangeCollapse" aria-expanded="false" aria-controls="resultsShowCollapse">
+                                    محدوده قیمت
+                                  </button>
+                                </h2>
+                                <div id="showRangeCollapse" class="accordion-collapse collapse" aria-labelledby="resultsShow" data-bs-parent="#priceAccordion">
+                                    <div class="d-flex flex-row-reverse justify-content-between slider-labels">
+                                        <div class="text-right caption">
+                                            <span id="slider-range-value1"></span>
+                                        </div>
+                                        <div class="caption">
+                                            <span id="slider-range-value2"></span>
+                                        </div>
+                                    </div>
+                                    <div id="slider-range"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion bg-white mt-1" id="mSeller">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="mSellerShow">
+                                    <button class="res-acc accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mSellerShowCollapse" aria-expanded="false" aria-controls="mSellerShowCollapse">
+                                    فروشنده
+                                  </button>
+                                </h2>
+                                <div id="mSellerShowCollapse" class="accordion-collapse collapse" aria-labelledby="resultsShow" data-bs-parent="#mSeller">
+                                    <div class="px-1">
+                                        <hr>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="mSeller1">
+                                        <label class="form-check-label" for="mSeller1">
+                                          فروشگاه
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="mSeller2">
+                                        <label class="form-check-label" for="mSeller2">
+                                          فروشگاه برگزیده
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="sortOrder" tabindex="-1" aria-labelledby="mobileSort" aria-hidden="true">
+                <div class="modal-dialog sort">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title sort-ttl" id="mobileSort">مرتب سازی بر اساس</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-check op">
+                                <input class="form-check-input mx-1" type="radio" name="flexRadioDefault" id="bestSale">
+                                <label class="form-check-label" for="bestSale" style="font-size: 12px;">
+                              پرفروش ترین
+                            </label>
+                            </div>
+                            <div class="form-check op">
+                                <input class="form-check-input mx-1" type="radio" name="flexRadioDefault" id="relevant" checked>
+                                <label class="form-check-label" for="relevant" style="font-size: 12px;">
+                              مرتبط ترین
+                            </label>
+                            </div>
+                            <div class="form-check op">
+                                <input class="form-check-input mx-1" type="radio" name="flexRadioDefault" id="mostViewed">
+                                <label class="form-check-label" for="mostViewed" style="font-size: 12px;">
+                              پربازدیدترین
+                            </label>
+                            </div>
+                            <div class="form-check op">
+                                <input class="form-check-input mx-1" type="radio" name="flexRadioDefault" id="newest">
+                                <label class="form-check-label" for="newest" style="font-size: 12px;">
+                              جدیدترین
+                            </label>
+                            </div>
+                            <div class="form-check op">
+                                <input class="form-check-input mx-1" type="radio" name="flexRadioDefault" id="cheapest">
+                                <label class="form-check-label" for="cheapest" style="font-size: 12px;">
+                              ارزان ترین
+                            </label>
+                            </div>
+                            <div class="form-check opl">
+                                <input class="form-check-input mx-1" type="radio" name="flexRadioDefault" id="expensive">
+                                <label class="form-check-label" for="expensive" style="font-size: 12px;">
+                              گران ترین
+                            </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--mobile breadcrumb-->
+    <nav class="mbread my-2 container-fluid" style=" --bs-breadcrumb-divider: '>'; " aria-label="breadcrumb ">
+        <ol class="breadcrumb ">
+            <li class="breadcrumb-item "><a href="# ">Home</a></li>
+            <li class="breadcrumb-item "><a href="#">Library</a></li>
+            <li class="breadcrumb-item"><a href="#">Digital</a></li>
+            <li class="breadcrumb-item active" aria-current="page ">Mobile</li>
+        </ol>
+    </nav>
+    <hr class="my-0 d-md-none d-lg-none d-xl-none d-xxl-none">
+    <!--mobile product cards-->
+    <div class="container-fluid mp ">
+        <div class="row m-product p-2 ">
+            <p class="special-sale ">فروش ویژه</p>
+            <div class="p-img col-3 p-0 ">
+                <img class="img-thumbnail tmnl " src="images/m1.jpg " alt=" ">
+            </div>
+            <div class="p-detail col-9 p-0 ">
+                <p class="p-ttl ">
+                    گوشی موبایل اپل مدل iPhone 12 Pro A2408 دو سیم‌ کارت ظرفیت 128 گیگابایت
+                </p>
+                <p class="card-text mps "><i class="fi-xnsuhl-hard-floppy text-info "></i>موجود در انبار <span class="Score "> <span class="Score-number mps "> 4.2 </span><i class="fi-xnsuxl-star-solid "></i></span>
+
+                </p>
+
+                <p class="price-off "><span class="off ">%5</span><del class="Initial-price ">4.300.000</del></p>
+                <p class="off-Price "><span class="price-product ">4.119.000</span><span class="currency ">تومان</span> </p>
+
+            </div>
+
+        </div>
+        <div class="row m-product p-2 ">
+            <div class="p-img col-3 p-0 ">
+                <img class="img-thumbnail tmnl " src="images/m3.jpg " alt=" ">
+            </div>
+            <div class="p-detail col-9 p-0 ">
+                <p class="p-ttl ">
+                    گوشی موبایل اپل مدل iPhone 12 Pro A2408 دو سیم‌ کارت ظرفیت 128 گیگابایت
+                </p>
+                <p class="card-text mps "><i class="fi-xnsuhl-hard-floppy "></i>موجود در انبار <span class="Score "> <span class="Score-number "> 4.2 </span><i class="fi-xnsuxl-star-solid "></i></span>
+
+                </p>
+                <p class="off-Price "><span class="price-product ">4.119.000</span><span class="currency ">تومان</span> </p>
+
+            </div>
+
+        </div>
+        <div class="row m-product p-2 ">
+            <div class="p-img col-3 p-0 ">
+                <img class="img-thumbnail tmnl " src="images/m6.jpg " alt=" ">
+            </div>
+            <div class="p-detail col-9 p-0 ">
+                <p class="p-ttl ">
+                    گوشی موبایل اپل مدل iPhone 12 Pro A2408 دو سیم‌ کارت ظرفیت 128 گیگابایت
+                </p>
+
+            </div>
+            <div class="card-footer row unavailable-footer ">
+
+                <div class="line-unavailable col ">
+                    <hr>
+                </div>
+                <p class="unavailable col ">ناموجود</p>
+                <div class="line-unavailable col ">
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--footer-->
+    <footer class="container-fluid footer ">
+        <div class="col-lg-12 d-none d-md-block d-lg-block d-xl-block d-xxl-block top ">
+            <a href="#top " class="top-text "><i class="fi-cnluxl-chevron me-1 "></i>برگشت به بالا</a>
+        </div>
+        <div class="container ft-features ">
+            <div class="row ">
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft d-none d-md-none d-lg-none d-xl-block d-xxl-block ">
+                    <a href="# " class="f-features ms-5 "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container ft-features pb-4 d-none d-lg-block ">
+            <div class="row ">
+                <div class="col-lg-2 ">
+                    <h6> <a href="# " class="ft-tt "> راهنمای خرید از دیجی‌کالا</a></h3>
+                        <br>
+                        <a href="# ">نحوه ثبت سفارش</a>
+                        <br>
+                        <a href="# ">رویه ارسال سفارش</a>
+                        <br>
+                        <a href="# ">شیوه‌های پرداخت</a>
+                </div>
+                <div class="col-lg-2 ">
+                    <h6><a href="# " class="ft-tt ">خدمات مشتریان</a></h6>
+                    <br>
+                    <a href="# ">پاسخ به پرسش‌های متداول</a>
+                    <br>
+                    <a href="# ">رویه‌های بازگرداندن کالا</a>
+                    <br>
+                    <a href=" ">شرایط استفاده</a>
+                    <br>
+                    <a href="# ">حریم خصوصی</a>
+                    <br>
+                    <a href="# ">گزارش باگ</a>
+                </div>
+                <div class="col-lg-2 ">
+                    <h6><a href="# " class="ft-tt ">با دیجی‌کالا</a></h6>
+                    <br>
+                    <a href="# ">اتاق خبر دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">فروش در دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">فرصت‌های شغلی</a>
+                    <br>
+                    <a href="# ">تماس با دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">درباره دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">راهنمای هویت بصری</a>
+                </div>
+
+                <div class="col-lg-6 ">
+                    <h6>از تخفیف‌ها و جدیدترین‌های دیجی‌کالا باخبر شوید:</h6>
+                    <form class="d-flex ">
+                        <input class="form-control ft-email " type="email " placeholder="آدرس ایمیل خود را وارد کنید " aria-label="email ">
+                        <button class="btn btn-outline-success ft-email-submit " type="submit ">ارسال</button>
+                    </form>
+                    <p class="so-li ">دیجی‌کالا را در شبکه‌های اجتماعی دنبال کنید:</p>
+                    <a href="# "><i class="fi-xnsux3-instagram ft-Social-Networks me-2 "></i></a>
+                    <a href="# "> <i class="fi-xnsux3-twitter ft-Social-Networks "></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container desktop-footer ">
+            <div class="row ">
+                <div class="col-6 text-end ">
+                    <p>هفت روز هفته ، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم</p>
+                </div>
+                <div class="col-2 ">
+                    <p>شماره تماس : <a href="# ">۶۱۹۳۰۰۰۰ - ۰۲۱</a> </p>
+                </div>
+                <div class="col-4 ">
+                    <p> آدرس ایمیل: <a href="# ">info@digikala.com</a></p>
+                </div>
+                <div class="col d-flex justify-content-center ">
+                    <a href="# "><img src="../multi shop/images/footer/سیب اپ.png " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "><img src="../multi shop/images/footer/مایکت.svg " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "><img src="../multi shop/images/footer/بازار.svg " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "> <img src="../multi shop/images/footer/گوگل پلی.png " alt=" " class="ft-ap "></a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid ft-bootem ">
+            <div class="row ">
+                <div class="col-8 ">
+                    <h6 class="mt-4 ">فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلاین</h6>
+                    <p class="ft-bootem-text "> .دیجی‌کالا به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با بیش از یک دهه تجربه، با پایبندی به سه اصل، پرداخت در محل، 7 روز ضمانت بازگشت کالا و تضمین اصل‌بودن کالا موفق شده تا همگام با فروشگاه‌های معتبر جهان، به بزرگ‌ترین فروشگاه
+                        اینترنتی ایران تبدیل شود. به محض ورود به سایت دیجی‌کالا با دنیایی از کالا رو به رو می‌شوید! هر آنچه که نیاز دارید و به ذهن شما خطور می‌کند در اینجا پیدا خواهید کرد<a href="# ">مشاهده بیشتر</a></p>
+                </div>
+                <div class="col-4 pt-3 ">
+                    <a href="# " class="ft-enamad-b "> <img src="../multi shop/images/footer/نشان ملی.png " alt=" " class="ft-enamad "></a>
+                    <a href="# " class="ft-enamad-b "><img src="../multi shop/images/footer/نماد الکترونیک.png " alt=" " class="ft-enamad "></a>
+                    <a href="# " class="ft-enamad-b "> <img src="../multi shop/images/footer/کسب و کار مجاز.png " alt=" " class="ft-enamad "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/1.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/2.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/3.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/4.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/5.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/6.svg " alt=" "></a>
+                </div>
+            </div>
+        </div>
+        <!--mobile footer-->
+        <div class="container-fluid m-links mb-3 ">
+            <div class="row pb-3 ">
+                <p class="so-li ">ما را در شبکه های اجتماعی دنبال کنید</p>
+                <button class="btn btn-insta "><i class="fi-xnsuxx-instagram me-2 "></i>  اینستاگرام فروشگاه</button>
+            </div>
+            <div class="row ">
+                <div class="col-6 ">
+                    <ul class="list-unstyled text-center text-muted ">
+                        <li><a href="# "><small>نحوه ثبت سفارش</small></a></li>
+                        <li><a href="# "><small>راهنما</small></a></li>
+                        <li><a href="# "><small>درباره ما</small></a></li>
+                        <li><a href="# "><small>اینفوگرافی</small></a></li>
+                        <li><a href="# "><small>گزارش باگ</small></a></li>
+                        <li><a href="# "><small>تماس با ما</small></a></li>
+
+                    </ul>
+                </div>
+                <div class="col-6 ">
+                    <ul class="list-unstyled text-center text-muted ">
+                        <li><a href="# "><small>فروش در سایت</small></a></li>
+                        <li><a href="# "><small>فرصت های شغلی</small></a></li>
+                        <li><a href="# "><small>سوالات متداول</small></a></li>
+                        <li><a href="# "><small>دانلود اپلیکیشن</small></a></li>
+                        <li><a href="# "><small>شرایط استفاده</small></a></li>
+                        <li><a href="# "><small>حریم خصوصی</small></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <h6 class="ft-about-tt text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h6>
+                <p class="ft-about ">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،<span id="dots">...</span><span id="more"> و برای شرایط فعلی تکنولوژی مورد
+                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی،
+                و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                اساسا مورد استفاده قرار گیرد.</span>
+                </p>
+                <div class="dots"></div>
+                <button onclick="myFunction() " id="myBtn" class="more-btn btn">نمایش بیشتر </button>
+            </div>
+
+            <hr class="ft-hr ">
+            <p class="cpr mb-0 "><small>کلیه حقوق این سایت متعلق</small></p>
+            <p class="cpr pb-2 "><small>به شرکت ...................(سایت فروشگاهی) می باشد</small></p>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js " integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js " integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG " crossorigin="anonymous "></script>
+    <script defer src="https://friconix.com/cdn/friconix.js "></script>
+    <script src="js/price range.js "></script>
+    <script src="js/main.js "></script>
+
+
+
+
+
+</body>
+
+</html>
