@@ -31,7 +31,7 @@ window.onclick = function(event) {
 }
 
 /*----slider script----*/
-var swiper = new Swiper('.swiper-container', {
+var swiper = new Swiper('.index-swiper', {
     slidesPerView: 'auto',
     spaceBetween: 10,
     freeMode: true,
@@ -95,6 +95,15 @@ var swiper = new Swiper('.group-swiper', {
         }
     }
 });
+
+var swiper = new Swiper('.product-slider', {
+    pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+    },
+});
+
+
 
 
 let latestScroll = 0
@@ -179,6 +188,3 @@ $(document).ready(function() {
         return false;
     });
 });
-
-
-/*tooltips*/

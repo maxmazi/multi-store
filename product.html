@@ -17,14 +17,13 @@
     <link rel="stylesheet" href="css/nav-style.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../multi shop/css/product.css">
 </head>
 
 <body>
     <p id="top"></p>
     <!--navbar-->
-    <div class="container-fluid">
+    <div class="container-fluid desktop-nav">
         <div class="row justify-content-between">
             <nav class="navbar navbar-light bg-custom px-5 py-4 fixed-top">
                 <div class="container-fluid">
@@ -54,8 +53,8 @@
                 <div class="container-fluid">
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+                <span class="navbar-toggler-icon"></span>
+              </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown has-megamenu">
@@ -79,9 +78,58 @@
             </nav>
         </div>
     </div>
-    <!--heder-end-->
-    <!--breadcrumb-->
-    <div class="  Breadcrumb-p">
+
+
+    <!--mobile nav-->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "70%";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.style.backgroundColor = "#f5f5f5";
+        }
+    </script>
+
+    <div class="navbar mob-nav p-2 mobile-nav m-bg d-flex">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-menu" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size:21px;cursor:pointer;padding-right:15px;">
+                &#9776;
+      </button>
+        <a class="navbar-brand" href="index.html">LOGO</a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog m-modal">
+                <div class="modal-content m-modal-dialog">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-nav row justify-content-between">
+            <nav class="navbar navbar-light bg-custom px-lg-5 py-lg-4 p-xs-0 p-sm-0">
+                <div class="container-fluid mobile-cf">
+                    <form class="d-flex col-lg-8 col-7">
+                        <input class="w-100 mobile-search form-control me-2 search-form" type="search" placeholder="جستجو" aria-label="Search">
+                    </form>
+                    <div class="utilities col-lg-4 col-5 d-flex flex-row-reverse my-auto">
+                        <div class="nav-link cart ps-1 py-1" href="#" role="button"><i class="fi-xwsuhl-shopping-cart"></i></div>
+                        <div class="nav-link pe-2 user py-1" href="#" role="button"><i class="fi-xnsuxl-user"></i></div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--navbar end-->
+    <!--desktop breadcrumb-->
+    <div class="dbc Breadcrumb-p">
         <div class="row  ">
             <div class="col">
                 <nav aria-label="breadcrumb">
@@ -97,8 +145,18 @@
             </div>
         </div>
     </div>
-    <!--product-->
-    <div class="container-fluid">
+    <!--mobile breadcrumb-->
+    <nav class="mbread my-2 container-fluid" style=" --bs-breadcrumb-divider: '>'; " aria-label="breadcrumb ">
+        <ol class="breadcrumb ">
+            <li class="breadcrumb-item "><a href="# ">Home</a></li>
+            <li class="breadcrumb-item "><a href="#">Library</a></li>
+            <li class="breadcrumb-item"><a href="#">Digital</a></li>
+            <li class="breadcrumb-item active" aria-current="page ">Mobile</li>
+        </ol>
+    </nav>
+    <hr class="my-0 d-md-none d-lg-none d-xl-none d-xxl-none">
+    <!--desktop product-->
+    <div class="container-fluid desktop-p">
         <div class="row">
             <!--product img-->
             <div class="col-lg-3 product-img">
@@ -498,40 +556,78 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="shopingCart" tabindex="-1" aria-labelledby="shopingContent" aria-hidden="true">
-        <div class="modal-dialog modal-cart">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="shopingContent">سبد خرید</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <a href="#" class="col-3">
-                                <img src="../multi shop/images/m5.jpg" alt="" class="modal-cart-img">
-                            </a>
-                            <div class="col-7">
-                                <p>گوشی موبایل سامسونگ مدل Galaxy S20 FE SM-G780F/DS دو سیم کارت ظرفیت 128 گیگابایت</p>
+        <div class="modal fade" id="shopingCart" tabindex="-1" aria-labelledby="shopingContent" aria-hidden="true">
+            <div class="modal-dialog modal-cart">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="shopingContent">سبد خرید</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <a href="#" class="col-3">
+                                    <img src="../multi shop/images/m5.jpg" alt="" class="modal-cart-img">
+                                </a>
+                                <div class="col-7">
+                                    <p>گوشی موبایل سامسونگ مدل Galaxy S20 FE SM-G780F/DS دو سیم کارت ظرفیت 128 گیگابایت</p>
+                                </div>
+                                <a href="#" class="col-2">
+                                    <i class="fi-xnsuxl-trash-bin"></i>
+                                </a>
                             </div>
-                            <a href="#" class="col-2">
-                                <i class="fi-xnsuxl-trash-bin"></i>
-                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="" data-bs-dismiss="modal">ادامه به خرید</button>
-                    <button type="button" class="">تسویه حساب</button>
-                    <button type="button" class="">فروشگا</button>
+                    <div class="modal-footer">
+                        <button type="button" class="" data-bs-dismiss="modal">ادامه به خرید</button>
+                        <button type="button" class="">تسویه حساب</button>
+                        <button type="button" class="">فروشگا</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!--mobile product-->
+    <div class="mobile-p card">
+        <div class="card-header px-0">
+            <p class="spc-off">
+                پیشنهاد شگفت انگیز
+            </p>
+            <hr class="m-hr">
+            <p class="p-title px-2">
+                گوشی موبایل اپل مدل iPhone 12 Pro Max A2412 دو سیم‌ کارت ظرفیت 256 گیگابایت
+            </p>
+            <div class="d-flex">
 
-    <!--footer-star-->
+            </div>
+        </div>
+        <div class="card-body p-slider">
+            <!-- Swiper -->
+            <div class="swiper-container product-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/m2.jpg" class="p-th img-thumbnail">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/m3.jpg" class="p-th img-thumbnail">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/m1.jpg" class="p-th img-thumbnail">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/m6.jpg" class="p-th img-thumbnail">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/m5.jpg" class="p-th img-thumbnail">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination product-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
     <footer class="container-fluid footer ">
         <div class="col-lg-12 d-none d-md-block d-lg-block d-xl-block d-xxl-block top ">
             <a href="#top " class="top-text "><i class="fi-cnluxl-chevron me-1 "></i>برگشت به بالا</a>
@@ -696,9 +792,9 @@
             <div>
                 <h6 class="ft-about-tt text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h6>
                 <p class="ft-about ">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،<span id="dots">...</span><span id="more"> و برای شرایط فعلی تکنولوژی مورد
-            نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی،
-            و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
-            اساسا مورد استفاده قرار گیرد.</span>
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی،
+                    و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                    اساسا مورد استفاده قرار گیرد.</span>
                 </p>
                 <div class="dots"></div>
                 <button onclick="myFunction() " id="myBtn" class="more-btn btn">نمایش بیشتر </button>
@@ -718,7 +814,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
     <script defer src="https://friconix.com/cdn/friconix.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/products.js"></script>
 </body>
