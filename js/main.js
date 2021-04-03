@@ -99,7 +99,6 @@ var swiper = new Swiper('.group-swiper', {
 var swiper = new Swiper('.product-slider', {
     pagination: {
         el: '.swiper-pagination',
-        dynamicBullets: true,
     },
 });
 
@@ -188,3 +187,7 @@ $(document).ready(function() {
         return false;
     });
 });
+
+
+
+/* color select jquery*/

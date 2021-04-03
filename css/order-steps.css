@@ -90,7 +90,7 @@ counter-reset:step;
 .multisteps-form__progress-btn:before {
     counter-increment: step;
       position: absolute;
-  top: 0;
+     top: 35px;
   left: 50%;
   display: block;
   width: 13px;
@@ -114,7 +114,7 @@ counter-reset:step;
 }
 .multisteps-form__progress-btn:after {
   position: absolute;
-  top: 11px;
+  top: 47px;
   left: calc(55% - 13px / 2);
   transition-property: all;
   transition-duration: 0.15s;
@@ -211,4 +211,64 @@ counter-reset:step;
   transition-delay: 0s;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.add-adress{
+  background: #fff;
+  color: #6d6d6d;
+  box-shadow: 0 12px 12px 0 hsl(0deg 0% 71% / 10%);
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+#add-adress2{
+  
+  
+  display: none;
+}
+
+#adressDisplay2:checked~#add-adress2{
+  display: block;
+}
+
+#adressDisplay2:checked~#add-adress1{
+  display: none;
+}
+#adressDisplay1:checked~#add-adress1{
+  display: block;
+}
+
+#adressDisplay1:checked~#add-adress2{
+  display: none;
+}
+
+
+input[type=radio]{
+  display: none;
+}
+
+
+.t-address{
+  color: red;
+  font-size: 16px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+
+.close-addaddress{
+  font-size: 25px;
+    padding: 0;
+    text-align: left;
+    margin-top: -13px;
+}
+
+.submit{
+  border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 11px 6px;
+    color: #1b1b1b;
+    font-size: 12px;
+    font-weight: 500;
 }

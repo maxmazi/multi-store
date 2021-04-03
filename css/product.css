@@ -349,12 +349,26 @@ input {
     height: auto;
 }
 
+.mobile-product {
+    display: none;
+}
+
+.desktop-p {
+    background-color: #fff;
+}
+
+.mbread {
+    display: none;
+}
+
 @media (max-width:564px) {
     .desktop-p {
         display: none;
     }
-    .mobile-p {
+    .mobile-product {
         display: block;
+    }
+    .mobile-p {
         background-color: #fff;
         box-shadow: 0 0 5px rgba(100, 100, 100, 0.2);
         margin: 5px;
@@ -431,5 +445,82 @@ input {
     .swiper-pagination-bullet-active {
         opacity: 1;
         background: var(--swiper-pagination-color, #10c9e8);
+    }
+    .sn {
+        font-size: 11px !important;
+        line-height: 28px;
+    }
+    .under-pro {
+        font-size: 11px;
+        color: #747474;
+    }
+    .m-brand a,
+    .m-cat a {
+        font-size: 11px !important;
+        color: #41d6f7 !important;
+        font-weight: 300 !important;
+    }
+    .rt {
+        border-left: 1px solid #c0c2c5;
+    }
+    .card-footer {
+        background-color: #fff !important;
+        border: none;
+    }
+    .names {
+        font-size: 11px;
+        color: #555;
+    }
+    .snames {
+        font-size: 11px;
+        color: #10c9e8;
+    }
+    .ratings {
+        font-size: 11px;
+        color: #10c9e8;
+    }
+    .seller-rate {
+        border-left: 1px solid #d8d8d8;
+    }
+    .arrow {
+        position: absolute;
+        left: 5px;
+        margin-top: 4%;
+    }
+    .modal-header .btn-close {
+        margin: 0;
+    }
+    .modal-title {
+        font-size: 14px;
+        color: #555;
+    }
+    .modal-name {
+        font-weight: 500;
+        font-size: 11px;
+        color: #555;
+    }
+    .rate-title {
+        font-size: 11px;
+        color: #555;
+    }
+    .bg-perfect {
+        background-color: #00ff5575;
+        color: #0fc259;
+        font-size: 13px;
+    }
+    .bg-good {
+        background-color: #a6ff008e;
+        color: #59c500;
+        font-size: 13px;
+    }
+    .bg-bad {
+        background-color: #ff000079;
+        color: #c20000;
+        font-size: 13px;
+    }
+    .rate-items {
+        font-size: 11px;
+        font-weight: 100;
+        color: #747474;
     }
 }
