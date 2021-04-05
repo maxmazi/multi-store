@@ -523,4 +523,27 @@ input {
         font-weight: 100;
         color: #747474;
     }
+    .satisfaction-items {
+        font-size: 11px;
+        color: #555;
+    }
+    .bg-p-perfct {
+        background-color: #156805;
+    }
+    .bg-p-good {
+        background-color: #59c500;
+    }
+    .bg-p-nocomment {
+        background-color: #e7c815;
+    }
+    .bg-p-notgood {
+        background-color: #ff7b00;
+    }
+    .bg-p-bad {
+        background-color: #dd1919;
+    }
+    .guaranty {
+        font-size: 11px;
+        color: #555;
+    }
 }
