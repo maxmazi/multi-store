@@ -142,6 +142,34 @@ function myFunction() {
 }
 
 
+/*price range slider*/
+
+$(".js-range-slider").ionRangeSlider({
+    type: "double",
+    min: 0,
+    max: 43000000,
+    from: 200,
+    to: 500,
+    grid: true
+});
+
+
+/*bttb
+$(function() {
+    var header = $(".cd-top-none");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 200) {
+            header.removeClass('cd-top-none').addClass("cd-top");
+        } else {
+            header.removeClass("cd-top").addClass('cd-top-none');
+        }
+    });
+});
+*/
+
+
 /*bttb*/
 $(document).ready(function() {
     $(window).scroll(function() {
