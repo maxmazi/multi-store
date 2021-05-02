@@ -104,8 +104,8 @@ var swiper = new Swiper('.product-slider', {
 
 
 function ToggleMenu() {
-    const togglemenu = document.querySelector('.menu');
-    togglemenu.classList.toggle('.active');
+    const togglemenu = document.querySelector('#userDash');
+    togglemenu.classList.toggle('active');
 }
 
 let latestScroll = 0

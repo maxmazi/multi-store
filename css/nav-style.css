@@ -33,7 +33,7 @@
 
 .menu {
     position: absolute !important;
-    width: 200px !important;
+    width: 270px !important;
     top: 5rem;
     left: 9rem;
     background-color: #fff;
@@ -43,8 +43,21 @@
     padding: 10px;
     opacity: 0;
 }
+.avatar{
+    width:50px;
+    height:auto;
+    margin-left:20px;
+}
+.username{
+    align-self: center;
+}
+.see{
+    margin-top:-20px;
+    color:#28aace;
+    margin-right:25px;
+}
 
-.menu.active {
+.utilities .menu.active {
     opacity: 1;
 }
 
