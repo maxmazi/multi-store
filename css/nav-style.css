@@ -31,18 +31,28 @@
     margin-top: .125rem;
 }
 
-.user-drop {
+.menu {
     position: absolute !important;
     width: 200px !important;
-    top: 4rem;
+    top: 5rem;
+    left: 9rem;
+    background-color: #fff;
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.116);
-    z-index: 2000;
+    padding: 10px;
+    opacity: 0;
+}
+
+.menu.active {
+    opacity: 1;
 }
 
 .snd-nav {
     margin-top: 97px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 .navbar2 {
