@@ -57,17 +57,22 @@
     }
     
     .sign p {
+        width: 100%;
+        margin-right: 13%;
+        margin-top: 80px;
         text-align: center;
         color: #fafafa;
         font-size: 14px;
     }
     
     .sign a {
+        margin-bottom: -250px;
+        margin-top: 20px;
         background: linear-gradient(145deg, #ec3544, #c01e2b);
         color: #ffffff;
         text-align: center;
         width: 220px;
-        margin: 0 auto;
+        margin-right: 33%;
         padding: 20px;
         border-radius: 50px;
         border: 2px solid #fff;
@@ -177,4 +182,8 @@
         font-weight: 400;
         display: block;
         margin-bottom: 25px !important;
+    }
+    
+    .hidden {
+        display: none;
     }
