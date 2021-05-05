@@ -75,14 +75,14 @@ function msf_btn_back() {
 console.log("loaded");
 
 function switcher(currentElement) {
-    const hidenClass = 'hidden'
+    const hiddenClass = 'hidden'
 
     const targetData = currentElement.getAttribute('data-target');
-    const currentParent = currentElement.parentNode.id
+    const currentParent = currentElement?.parentNode?.parentNode?.id
 
     const targetDiv = document.getElementById(targetData)
     const parentDiv = document.getElementById(currentParent)
 
-    parentDiv.classList.add(hidenClass)
-    targetDiv.classList.remove(hidenClass)
+    parentDiv.classList.add(hiddenClass)
+    targetDiv.classList.remove(hiddenClass)
 }
