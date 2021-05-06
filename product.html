@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="fa">
+
+<head>
+    <title>سایت چند فروشگاهی</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/fav.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.rtl.min.css" integrity="sha384-4dNpRvNX0c/TdYEbYup8qbjvjaMrgUPh+g4I03CnNtANuv+VAvPL6LqdwzZKV38G" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bootstrap-utilities.rtl.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.rtl.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav-style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <link rel="stylesheet" href="../multi shop/css/product.css">
+</head>
+
+<body>
+    <p id="top"></p>
+    <!--navbar-->
+    <div class="container-fluid desktop-nav">
+        <div class="row justify-content-between">
+            <nav class="navbar navbar-light bg-custom px-5 py-4 fixed-top">
+                <div class="container-fluid">
+                    <form class="d-flex col-lg-8">
+                        <a class="navbar-brand me-5 my-auto" href="index.html">LOGO</a>
+                        <input class="form-control me-2 search-form" type="search" placeholder="جستجو در کالاها" aria-label="Search">
+                    </form>
+                    <div class="utilities col-lg-4 d-flex flex-row-reverse my-auto">
+                        <div class="nav-link cart ps-3 py-1"><i class="fi-xnluhx-shopping-cart"></i></div>
+                        <div class="nav-link dropdown-toggle pe-3 user py-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fi-xnluxx-user"></i>
+                        </div>
+                        <ul class="dropdown-menu user-drop" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row justify-content-between snd-nav fixed-top" id="secondNav">
+            <nav class="navbar navbar-expand-lg navbar-light bg-custom px-5">
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link active me-2 item" aria-current="page" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fi-xnsuxl-three-bars-solid"></i>دسته بندی کالاها</a>
+                                <ul class="dropdown-menu megamenu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link item" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link item" href="#">Pricing</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <!--mobile nav-->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "70%";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.style.backgroundColor = "#f5f5f5";
+        }
+    </script>
+
+    <div class="navbar mob-nav p-2 mobile-nav m-bg d-flex">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-menu" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size:21px;cursor:pointer;padding-right:15px;">
+                &#9776;
+      </button>
+        <a class="navbar-brand" href="index.html">LOGO</a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog m-modal">
+                <div class="modal-content m-modal-dialog">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-nav row justify-content-between">
+            <nav class="navbar navbar-light bg-custom px-lg-5 py-lg-4 p-xs-0 p-sm-0">
+                <div class="container-fluid mobile-cf">
+                    <form class="d-flex col-lg-8 col-7">
+                        <input class="w-100 mobile-search form-control me-2 search-form" type="search" placeholder="جستجو" aria-label="Search">
+                    </form>
+                    <div class="utilities col-lg-4 col-5 d-flex flex-row-reverse my-auto">
+                        <div class="nav-link cart ps-1 py-1" href="#" role="button"><i class="fi-xwsuhl-shopping-cart"></i></div>
+                        <div class="nav-link pe-2 user py-1" href="#" role="button"><i class="fi-xnsuxl-user"></i></div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--navbar end-->
+    <!--desktop breadcrumb-->
+    <div class="dbc Breadcrumb-p">
+        <div class="row  ">
+            <div class="col">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">سال مد </a></li>
+                        <li class="breadcrumb-item"><a href="#">دسته بندی کالا</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">صفحه کالا</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col">
+                <p class="Breadcrumb-p-text col">کالای خود را در دیجی‌کالا بفروشید <img src="./images/icon/shop.svg" alt="" width="18px" height="18px"> </p>
+            </div>
+        </div>
+    </div>
+    <!--mobile breadcrumb-->
+    <nav class="mbread my-2 container-fluid" style=" --bs-breadcrumb-divider: '>'; " aria-label="breadcrumb ">
+        <ol class="breadcrumb ">
+            <li class="breadcrumb-item "><a href="# ">Home</a></li>
+            <li class="breadcrumb-item "><a href="#">Library</a></li>
+            <li class="breadcrumb-item"><a href="#">Digital</a></li>
+            <li class="breadcrumb-item active" aria-current="page ">Mobile</li>
+        </ol>
+    </nav>
+    <hr class="my-0 d-md-none d-lg-none d-xl-none d-xxl-none">
+    <!--desktop product-->
+    <div class="container-fluid desktop-p">
+        <div class="row">
+            <!--product img-->
+            <div class="col-lg-3 product-img">
+                <img src="../multi shop/images/m5.jpg" alt="" width="388px" height="388px" style="padding: 15px;">
+
+                <!-- Button trigger modal -->
+
+                <div class="row">
+                    <div class="column col">
+                        <img src="../multi shop/images/m1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow btn btn-primary" data-bs-toggle="modal" data-bs-target="#productGallery">
+                    </div>
+                    <div class="column clo ms-2">
+                        <img src="../multi shop/images/m2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow btn btn-primary" data-bs-toggle="modal" data-bs-target="#productGallery">
+                    </div>
+                    <div class="column col ms-2">
+                        <img src="../multi shop/images/m3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow btn btn-primary" data-bs-toggle="modal" data-bs-target="#productGallery">
+                    </div>
+                    <div class="column col ms-2">
+                        <img src="../multi shop/images/m4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow btn btn-primary" data-bs-toggle="modal" data-bs-target="#productGallery">
+                    </div>
+                    <div class="column col ms-2">
+                        <img src="../multi shop/images/m5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow btn btn-primary blor" data-bs-toggle="modal" data-bs-target="#productGallery">
+                        <i class="fi-xwsuxl-ellipsis icon-blor   " onclick="openModal();currentSlide(5)" data-bs-toggle="modal" data-bs-target="#productGallery"></i>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="productGallery" tabindex="-1" aria-labelledby="productGalleryLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="productGalleryLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div id="myModal"></div>
+
+                                <div class="row">
+                                    <div class="mySlides col-7">
+                                        <div class="numbertext"></div>
+                                        <img src="../multi shop/images/m1.jpg" style="width:100%">
+                                    </div>
+
+                                    <div class="mySlides col-7">
+                                        <div class="numbertext"></div>
+                                        <img src="../multi shop/images/m2.jpg" style="width:100%">
+                                    </div>
+
+                                    <div class="mySlides col-7">
+                                        <div class="numbertext"></div>
+                                        <img src="../multi shop/images/m3.jpg" style="width:100%">
+                                    </div>
+
+                                    <div class="mySlides col-7">
+                                        <div class="numbertext"></div>
+                                        <img src="../multi shop/images/m4.jpg" style="width:100%">
+                                    </div>
+
+                                    <div class="mySlides col-7">
+                                        <div class="numbertext"></div>
+                                        <img src="../multi shop/images/m5.jpg" style="width:100%">
+                                    </div>
+
+                                    <div class="mySlides col-7">
+                                        <div class="numbertext"></div>
+                                        <img src="../multi shop/images/m6.jpg" style="width:100%">
+                                    </div>
+
+
+
+
+                                    <div class="col-5">
+
+                                        <div class="caption-container">
+                                            <p class="text-product-modal"> گوشی موبایل اپل مدل iPhone 12 Pro Max A2412 دو سیم‌ کارت ظرفیت 256 گیگابایت </p>
+                                        </div>
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="px-1 col-lg-3">
+                                                    <img class="demo cursor" src="../multi shop/images/m1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                                                </div>
+                                                <div class="px-1 col-lg-3">
+                                                    <img class="demo cursor" src="../multi shop/images/m2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                                                </div>
+                                                <div class="px-1 col-lg-3 ">
+                                                    <img class="demo cursor" src="../multi shop/images/m3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                                                </div>
+                                                <div class="px-1 col-lg-3">
+                                                    <img class="demo cursor" src="../multi shop/images/m4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                                                </div>
+                                                <div class="px-1 col-lg-3">
+                                                    <img class="demo cursor" src="../multi shop/images/m5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Northern Lights">
+                                                </div>
+                                                <div class="px-1 col-lg-3">
+                                                    <img class="demo cursor" src="../multi shop/images/m6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Northern Lights">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--product details-->
+            <div class="col-lg-9" style="padding-bottom: 20px; border-bottom: 1px solid #dadada;">
+                <div class="col-12 pb-3">
+                    <h1 style="font-size: 18px;">
+                        گوشی موبایل سامسونگ مدل Galaxy S20 FE SM-G780F/DS دو سیم کارت ظرفیت 128 گیگابایت
+                    </h1>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-8 product-text">
+                            <p class="product-titel">Samsung Galaxy Galaxy S20 FE SM-G780F/DS Dual SIM 128GB Mobile Phone</p>
+                            <nav style="--bs-breadcrumb-divider: url();" aria-label="breadcrumb" class="mt-3">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <p class="card-text"><span class="Score"> <span class="Score-number"> 4.2 </span><i class="fi-xnsuxl-star-solid icon-star"></i></span>
+                                        </p>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="#">۱۵۹ پرسش و پاسخ</a></li>
+                                    <li class="breadcrumb-item"><a href="#">۴۵۸ دیدگاه کاربران </a></li>
+                                </ol>
+                            </nav>
+                            <p><img src="../multi shop/images/icon/badge.svg" alt="" width="20px">پیشنهاد شده توسط بیش از ۱۳۰ نفر از خریداران </p>
+
+                            <div class="row">
+                                <div style="z-index: 3;">
+                                    <p>رنگ:</p>
+                                </div>
+
+                                <input type="radio" name="color" id="color-red" checked>
+                                <input type="radio" name="color" id="color-blue">
+                                <input type="radio" name="color" id="color-yellow">
+                                <input type="radio" name="color" id="color-black">
+
+                                <div class=" col-3 product-color-text " id="red">
+                                    <p class="product-color-text-p"> قرمز </p>
+
+
+                                </div>
+                                <div class=" col-3 product-color-text" id="blue">
+                                    <p class="product-color-text-p"> آبی </p>
+                                </div>
+                                <div class=" col-3 product-color-text" id="yellow">
+                                    <p class="product-color-text-p"> زرد </p>
+                                </div>
+                                <div class=" col-3 product-color-text" id="black">
+                                    <p class="product-color-text-p"> مشکی </p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+
+                                <div class="m-2">
+                                    <label for="color-red" class="product-color" style="background: red;"></label>
+
+                                </div>
+                                <div class="m-2">
+                                    <label for="color-blue" class="product-color" style="background: blue;"></label>
+                                </div>
+                                <div class="m-2">
+                                    <label for="color-yellow" class="product-color" style="background: yellow;"></label>
+                                </div>
+                                <div class="m-2">
+                                    <label for="color-black" class="product-color" style="background: black;"></label>
+                                </div>
+                            </div>
+                            <div>
+                                <ul>
+                                    <td>ویژگی ها</td>
+                                    <li>حافظه داخلی: 128 گیگابایت</li>
+                                    <li>شبکه های ارتباطی: 4G، 3G، 2G</li>
+                                    <li>دوربین‌های پشت گوشی: 3 ماژول دوربین</li>
+                                    <li>سیستم عامل: Android
+                                    </li>
+                                    <li>توضیحات سیم کارت: سایز نانو (8.8 × 12.3 میلی‌متر)</li>
+                                    <li><a href="#"> مشاهده بیشتر </a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <input type="radio" name="Info" id="shopinfo" checked>
+                        <input type="radio" name="Info" id="Functioninfo">
+                        <input type="radio" name="Info" id="sendinfo">
+
+                        <div class="col-4 product-boten" id="shopInfo">
+                            <div class=" container ">
+
+                                <div class="col">
+                                    <div class="row my-3">
+                                        <div class="col">
+                                            <p>فروشنده</p>
+                                        </div>
+                                        <div class="col text-end">
+                                            <a href="#"> 2فروشنده دیگر </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="Functioninfo" style="cursor: pointer; width: 100%;">
+    <div class="row product-a p-2">
+<div class="col-1"></div>
+<div class="col-11">
+    <div class="row">
+<div class="col-6 " style="    height: 23px;"> <p>سال مد</p> </div>
+<div class="col-6 text-end"><i class="fi-xnslxl-chevron-solid "></i></div>
+<div class="col pb-2"> عملکرد5از5 </div>
+    </div>
+</div>    
+</div>
+</label>
+                                </div>
+                                <div class="row" style=" border-bottom: 1px solid #dfdfdf;">
+                                    <i class="fi-cwsuxl-check col-1  py-2"></i>
+                                    <p class="col py-2">سرویس ویژه دیجی کالا: ۷ روز تضمین بازگشت </p>
+                                </div>
+                                <div class="col">
+                                    <label for="sendinfo" style="cursor: pointer;">
+        <div class="row product-a p-2">
+    <div class="col-1"></div>
+    <div class="col-11">
+        <div class="row">
+    <div class="col-6 " style="    height: 23px;"> <p>موجود در انبار سال مد</p> </div>
+    <div class="col-6 text-end"><i class="fi-xnslxl-chevron-solid "></i></div>
+    <div class="col pb-2"><i class="fi-xtluhl-truck-thin"></i> ارسال سال مد</div>
+        </div>
+    </div>    
+    </div>
+    </label>
+                                </div>
+                                <div class="text-end pt-2">
+                                    <p class="price-off"><span class="off">%5</span><del class="Initial-price">4.300.000</del></p>
+                                    <p class="off-Price"><span class="price-product">4.119.000</span><span class="currency">تومان</span> </p>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-primary add-to-cart mb-3" data-bs-toggle="modal" data-bs-target="#shopingCart">
+                                        افزودن به سبد خرید
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 product-boten" id="FunctionInfo">
+                            <div class="container">
+                                <label for="shopinfo" style="cursor: pointer;" class="row py-2" style=" border-bottom: 1px solid #dfdfdf;">
+        <div class="col-6 " style="    height: 23px;"> <p><i class="fi-ctlrxl-chevron-solid"></i>برگشت</p> </div>
+        <div class="col-6 text-end"><i class="fi-ctluxl-warning-solid"></i></div>
+        
+    </label>
+                                <div class="col-12">
+                                    <p>سال مد</p>
+                                </div>
+                                <h4 class="pb-5" style="text-align: center;">عملکرد:5</h4>
+                                <div class="row">
+                                    <div class="d-flex justify-content-between px-5 ">
+                                        <div class="col-4 Performance-percentage-d">
+                                            <p class="Performance-percentage">100%</p>
+                                            <p> تامین به موقه</p>
+                                        </div>
+                                        <div class="col-4 Performance-percentage-d">
+                                            <p class="Performance-percentage">100%</p>
+                                            <p> تامین به موقه</p>
+                                        </div>
+                                        <div class="col-4 Performance-percentage-d">
+                                            <p class="Performance-percentage">100%</p>
+                                            <p> تامین به موقه</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col" style="margin-top: 100px;">
+                                    <button type="button" class="btn btn-primary add-to-cart " data-bs-toggle="modal" data-bs-target="#shopingCart">
+            افزودن به سبد خرید
+          </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 product-boten" id="sendInfo">
+                            <div class="container">
+                                <label for="shopinfo" style="cursor: pointer;" class="row py-2" style=" border-bottom: 1px solid #dfdfdf;">
+          <div class="col-6 " style="    height: 23px;"> <p><i class="fi-ctlrxl-chevron-solid"></i>برگشت</p> </div>
+          
+          
+      </label>
+                                <h4 class="pb-5">ارسال توسط دیجی‌کالا</h4>
+                                <div class="col-12">
+                                    این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <h4>لیست فروشندگان این کالا</h4>
+            <hr style="width: 150px; height: 3px;  color: rgb(255, 0, 0);">
+
+            <div class="container-fluid">
+                <div class="col-12" style=" 
+            padding-top: 25px;
+            padding-bottom: 9px;
+          border-bottom: 1px solid rgb(199 199 199); ">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-2 text-end"><i class="fi-xtluxl-home-thin"></i></div>
+                                <div class="col-10">
+                                    <p class="m-0">سال مد</p>
+                                    <p class="m-0">عملکرد5از5 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p> <i class="fi-xtluhl-truck-thin"></i>ارسال سال مد</p>
+                        </div>
+                        <div class="col">
+                            <p> <i class="fi-htluxl-check"></i> گارانتی 18 ماهه سال مد</p>
+                        </div>
+                        <div class="col">
+                            <p>38,900,000تومان</p>
+                        </div>
+                        <div class="col text-end">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary modal-button-cart" data-bs-toggle="modal" data-bs-target="#shopingCart">
+                                افزودن به سبد خرید
+                            </button>
+                            <!-- Modal -->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12" style="
+            padding-top: 25px;
+            padding-bottom: 9px;
+          border-bottom: 1px solid rgb(199 199 199); ">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-2 text-end"><i class="fi-xtluxl-home-thin"></i></div>
+                                <div class="col-10">
+                                    <p class="m-0">سال مد</p>
+                                    <p class="m-0">عملکرد5از5 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p> <i class="fi-xtluhl-truck-thin"></i>ارسال سال مد</p>
+                        </div>
+                        <div class="col">
+                            <p> <i class="fi-htluxl-check"></i> گارانتی 18 ماهه سال مد</p>
+                        </div>
+                        <div class="col">
+                            <p>38,900,000تومان</p>
+                        </div>
+                        <div class="col text-end">
+                            <button type="button" class="btn btn-primary modal-button-cart" data-bs-toggle="modal" data-bs-target="#shopingCart">
+                            افزودن به سبد خرید
+                          </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12" style=" 
+            padding-top: 25px;
+            padding-bottom: 9px;
+          border-bottom: 1px solid rgb(199 199 199); ">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-2 text-end"><i class="fi-xtluxl-home-thin"></i></div>
+                                <div class="col-10">
+                                    <p class="m-0">سال مد</p>
+                                    <p class="m-0">عملکرد5از5 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p> <i class="fi-xtluhl-truck-thin"></i>ارسال سال مد</p>
+                        </div>
+                        <div class="col">
+                            <p> <i class="fi-htluxl-check"></i> گارانتی 18 ماهه سال مد</p>
+                        </div>
+                        <div class="col">
+                            <p>38,900,000تومان</p>
+                        </div>
+                        <div class="col text-end">
+                            <button type="button" class="btn btn-primary modal-button-cart" data-bs-toggle="modal" data-bs-target="#shopingCart">
+                            افزودن به سبد خرید
+                          </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="shopingCart" tabindex="-1" aria-labelledby="shopingContent" aria-hidden="true">
+            <div class="modal-dialog modal-cart">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="shopingContent">سبد خرید</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <a href="#" class="col-3">
+                                    <img src="../multi shop/images/m5.jpg" alt="" class="modal-cart-img">
+                                </a>
+                                <div class="col-7">
+                                    <p>گوشی موبایل سامسونگ مدل Galaxy S20 FE SM-G780F/DS دو سیم کارت ظرفیت 128 گیگابایت</p>
+                                </div>
+                                <a href="#" class="col-2">
+                                    <i class="fi-xnsuxl-trash-bin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="" data-bs-dismiss="modal">ادامه به خرید</button>
+                        <button type="button" class="">تسویه حساب</button>
+                        <button type="button" class="">فروشگا</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--mobile product-->
+    <div class="mobile-product">
+        <div class="mobile-p card">
+            <div class="card-header px-0">
+                <p class="spc-off">
+                    پیشنهاد شگفت انگیز
+                </p>
+                <hr class="m-hr">
+                <p class="p-title px-2">
+                    گوشی موبایل اپل مدل iPhone 12 Pro Max A2412 دو سیم‌ کارت ظرفیت 256 گیگابایت
+                </p>
+                <div class="d-flex ps-1 justify-content-between">
+                    <div class="icons">
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172" style=" fill:#b9b9b9;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#7b7b7b"><path d="M53.75,25.63462c-11.42187,0 -21.8101,3.95372 -29.14904,11.16346c-7.33894,7.20974 -11.37019,17.52044 -11.37019,29.35577c0,20.02704 12.27464,34.96334 26.25481,47.54808c13.98017,12.58474 30.28606,23.72236 41.34615,36.79808c1.21454,1.52464 3.02344,2.42909 4.96154,2.48077h0.41346c1.9381,-0.05168 3.74699,-0.95613 4.96154,-2.48077c11.0601,-13.07572 27.36599,-24.21334 41.34615,-36.79808c13.98017,-12.58474 26.25481,-27.52103 26.25481,-47.54808c0,-11.83533 -4.23798,-22.14603 -11.57692,-29.35577c-7.33894,-7.20974 -17.52043,-11.16346 -28.94231,-11.16346c-11.31851,0 -20.59555,6.17608 -27.08173,11.78365c-3.17849,2.73919 -3.33353,3.48858 -5.16827,5.58173c-1.80889,-2.09315 -1.98978,-2.84254 -5.16827,-5.58173c-6.46033,-5.60757 -15.76322,-11.78365 -27.08173,-11.78365zM53.75,38.86538c6.22776,0 13.17909,4.16046 18.39904,8.68269c5.21996,4.52224 8.47596,8.88942 8.47596,8.88942c1.24038,1.73137 3.25601,2.76503 5.375,2.76503c2.11899,0 4.13462,-1.03365 5.375,-2.76503c0,0 3.23017,-4.36719 8.47596,-8.88942c5.24579,-4.52224 12.14544,-8.68269 18.39904,-8.68269c8.5018,0 15.19471,2.89423 19.84615,7.44231c4.65144,4.54808 7.44231,10.98257 7.44231,19.84615c0,14.65204 -8.86358,25.86719 -21.91346,37.625c-11.55108,10.41406 -25.66046,21.08654 -37.625,33.69712c-11.99038,-12.66226 -26.04808,-23.28305 -37.625,-33.69712c-13.04988,-11.75781 -21.91346,-22.97296 -21.91346,-37.625c0,-8.86358 2.79087,-15.29808 7.44231,-19.84615c4.65144,-4.54808 11.31851,-7.44231 19.84615,-7.44231z"></path></g></g></svg>
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#7b7b7b"><path d="M129,14.33333c-11.87412,0 -21.5,9.62588 -21.5,21.5c0.00438,1.34841 0.1356,2.69342 0.39193,4.01725l-50.99252,29.74447c-3.88392,-3.29017 -8.80922,-5.09561 -13.89941,-5.09505c-11.87412,0 -21.5,9.62588 -21.5,21.5c0,11.87412 9.62588,21.5 21.5,21.5c5.08233,-0.00997 9.99681,-1.82005 13.87142,-5.10905l51.02051,29.75847c-0.25633,1.32383 -0.38755,2.66884 -0.39193,4.01725c0,11.87412 9.62588,21.5 21.5,21.5c11.87412,0 21.5,-9.62588 21.5,-21.5c0,-11.87412 -9.62588,-21.5 -21.5,-21.5c-5.08714,0.00666 -10.00713,1.81694 -13.88542,5.10905l-51.00651,-29.75847c0.25633,-1.32383 0.38755,-2.66884 0.39193,-4.01725c-0.00438,-1.34841 -0.1356,-2.69342 -0.39193,-4.01725l50.99251,-29.74447c3.88392,3.29017 8.80922,5.09561 13.89941,5.09505c11.87412,0 21.5,-9.62588 21.5,-21.5c0,-11.87412 -9.62588,-21.5 -21.5,-21.5z"></path></g></g></svg>
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#7b7b7b"><path d="M28.66667,21.5v121.83333h121.83333v-14.33333h-107.5v-107.5zM145.43294,37.93294l-30.76628,30.76628l-21.5,-21.5l-40.90039,40.90039l10.13411,10.13411l30.76628,-30.76627l21.5,21.5l40.90039,-40.90039z"></path></g></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#7b7b7b"><path d="M86,16.125c-5.93937,0 -10.75,4.81063 -10.75,10.75c0,0.47199 0.07756,0.91936 0.13648,1.37524c-18.56528,4.75186 -32.38648,21.60406 -32.38648,41.62476v48.375c0,3.03704 -2.33796,5.375 -5.375,5.375h-5.375v10.75h5.375h34.48609c-0.73654,1.83833 -2.23609,3.28763 -2.23609,5.375c0,8.84171 7.28329,16.125 16.125,16.125c8.84171,0 16.125,-7.28329 16.125,-16.125c0,-2.08737 -1.49955,-3.53667 -2.23609,-5.375h34.48609h5.375v-10.75h-5.375c-3.03704,0 -5.375,-2.33796 -5.375,-5.375v-46.80029c0,-20.18421 -13.48956,-38.18744 -32.39697,-43.17847c0.06077,-0.46284 0.14697,-0.91675 0.14697,-1.39624c0,-5.93937 -4.81063,-10.75 -10.75,-10.75zM86.99732,37.6355c17.55882,0.52695 31.25268,15.97249 31.25268,33.81421v46.80029c0,2.08737 1.49955,3.53667 2.23609,5.375h-34.48609h-34.48608c0.73654,-1.83833 2.23608,-3.28763 2.23608,-5.375v-48.375c0,-18.20854 14.89786,-32.79036 33.24732,-32.2395zM22.51831,46.13892c-8.43467,18.44794 -8.44415,39.76546 0.021,58.22217l9.77368,-4.47217c-7.1546,-15.59929 -7.15232,-33.68052 -0.021,-49.27783zM149.48169,46.13892l-9.77368,4.47217c7.13132,15.59731 7.13357,33.67854 -0.021,49.27783l9.77369,4.47217c8.46515,-18.45671 8.45571,-39.77423 0.02099,-58.22217zM86,134.375c3.03704,0 5.375,2.33796 5.375,5.375c0,3.03704 -2.33796,5.375 -5.375,5.375c-3.03704,0 -5.375,-2.33796 -5.375,-5.375c0,-3.03704 2.33796,-5.375 5.375,-5.375z"></path></g></g></svg>
+                    </div>
+                    <div class="star d-flex me-2">
+                        <p class="sn my-auto text-muted"> 4.2 </p><span class="ms-2"><i class="fi-xwluxm-star-half-wide text-warning"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body p-slider">
+                <!-- Swiper -->
+                <div class="swiper-container product-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/m2.jpg" class="p-th img-thumbnail">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/m3.jpg" class="p-th img-thumbnail">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/m1.jpg" class="p-th img-thumbnail">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/m6.jpg" class="p-th img-thumbnail">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/m5.jpg" class="p-th img-thumbnail">
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination product-pagination"></div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex">
+                    <p class="under-pro rt pe-2">برند <span class="m-brand"><a href="#">سامسونگ</a></span></p>
+                    <p class="under-pro ms-2">دسته بندی <span class="m-cat"><a href="#">گوشی موبایل</a></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <select class="form-select" aria-label="Default select example" name="colors" id="colors">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <div id="dlg"></div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="seller-p" role="button" data-bs-toggle="modal" data-bs-target="#sellerP">
+                    <div class="d-flex">
+                        <div class="seller-icon my-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 172 172" style=" fill:#000000;"><defs><radialGradient cx="69.445" cy="150.62542" r="160.88808" gradientUnits="userSpaceOnUse" id="color-1_Xy10Jcu1L2Su_gr1"><stop offset="0" stop-color="#ffdd55"></stop><stop offset="0.328" stop-color="#ff543f"></stop><stop offset="0.348" stop-color="#fc5245"></stop><stop offset="0.504" stop-color="#e64771"></stop><stop offset="0.643" stop-color="#d53e91"></stop><stop offset="0.761" stop-color="#cc39a4"></stop><stop offset="0.841" stop-color="#c837ab"></stop></radialGradient><radialGradient cx="42.23317" cy="19.85275" r="106.82992" gradientUnits="userSpaceOnUse" id="color-2_Xy10Jcu1L2Su_gr2"><stop offset="0" stop-color="#4168c9"></stop><stop offset="0.999" stop-color="#4168c9" stop-opacity="0"></stop></radialGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M121.89425,150.46417l-71.66667,0.06808c-15.76667,0.01433 -28.67742,-12.87133 -28.69533,-28.638l-0.06808,-71.66667c-0.01433,-15.76667 12.87133,-28.67742 28.638,-28.69533l71.66667,-0.06808c15.76667,-0.01433 28.67742,12.87133 28.69533,28.638l0.06808,71.66667c0.01792,15.77025 -12.87133,28.681 -28.638,28.69533z" fill="url(#color-1_Xy10Jcu1L2Su_gr1)"></path><path d="M121.89425,150.46417l-71.66667,0.06808c-15.76667,0.01433 -28.67742,-12.87133 -28.69533,-28.638l-0.06808,-71.66667c-0.01433,-15.76667 12.87133,-28.67742 28.638,-28.69533l71.66667,-0.06808c15.76667,-0.01433 28.67742,12.87133 28.69533,28.638l0.06808,71.66667c0.01792,15.77025 -12.87133,28.681 -28.638,28.69533z" fill="url(#color-2_Xy10Jcu1L2Su_gr2)"></path><path d="M86,111.08333c-13.82808,0 -25.08333,-11.25167 -25.08333,-25.08333c0,-13.83167 11.25525,-25.08333 25.08333,-25.08333c13.82808,0 25.08333,11.25167 25.08333,25.08333c0,13.83167 -11.25525,25.08333 -25.08333,25.08333zM86,68.08333c-9.87925,0 -17.91667,8.03742 -17.91667,17.91667c0,9.87925 8.03742,17.91667 17.91667,17.91667c9.87925,0 17.91667,-8.03742 17.91667,-17.91667c0,-9.87925 -8.03742,-17.91667 -17.91667,-17.91667z" fill="#ffffff"></path><circle cx="31.5" cy="16.5" transform="scale(3.58333,3.58333)" r="1.5" fill="#ffffff"></circle><path d="M107.5,132.58333h-43c-13.82808,0 -25.08333,-11.25167 -25.08333,-25.08333v-43c0,-13.83167 11.25525,-25.08333 25.08333,-25.08333h43c13.82808,0 25.08333,11.25167 25.08333,25.08333v43c0,13.83167 -11.25525,25.08333 -25.08333,25.08333zM64.5,46.58333c-9.87925,0 -17.91667,8.03742 -17.91667,17.91667v43c0,9.87925 8.03742,17.91667 17.91667,17.91667h43c9.87925,0 17.91667,-8.03742 17.91667,-17.91667v-43c0,-9.87925 -8.03742,-17.91667 -17.91667,-17.91667z" fill="#ffffff"></path></g></g></svg>
+                        </div>
+                        <div class="seller-names ms-2">
+                            <p class="names">فروشنده: <span class="snames">سالمد</span></p>
+                            <div class="ratings d-flex">
+                                <div class="seller-rate pe-2">
+                                    <p class="mb-0">عملکرد: <span>5 </span>از 5</p>
+                                </div>
+                                <div class="scroe ps-2">
+                                    <p class="mb-0">90% <span>رضایت از کالا</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="original-icon" fill="#666666"><path d="M71.15783,86l27.38383,-27.38383c2.967,-2.967 2.967,-7.783 0,-10.75v0c-2.967,-2.967 -7.783,-2.967 -10.75,0l-33.067,33.067c-2.80217,2.80217 -2.80217,7.33867 0,10.13367l33.067,33.067c2.967,2.967 7.783,2.967 10.75,0v0c2.967,-2.967 2.967,-7.783 0,-10.75z"></path></g></g></svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="sellerP" tabindex="-1" aria-labelledby="sellerPLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen-lg-down">
+                        <div class="modal-content">
+                            <div class="modal-header seller-header d-flex justify-content-start">
+                                <p class="mb-0 me-2" type="button" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="24" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#666666"><path d="M14.33333,93.16667h126.033l-23.59983,23.59983c-2.79858,2.79858 -2.79858,7.33508 0,10.13367c1.40108,1.40108 3.23217,2.09983 5.06683,2.09983c1.83467,0 3.66575,-0.69875 5.06683,-2.09983l35.83333,-35.83333c1.34375,-1.34017 2.09983,-3.16408 2.09983,-5.06683c0,-1.90275 -0.75608,-3.72308 -2.09983,-5.06683l-35.83333,-35.83333c-2.79858,-2.79858 -7.33508,-2.79858 -10.13367,0c-2.79858,2.79858 -2.79858,7.33508 0,10.13367l23.59983,23.59983h-126.033c-3.956,0 -7.16667,3.21067 -7.16667,7.16667c0,3.956 3.21067,7.16667 7.16667,7.16667z"></path></g></g></svg></p>
+                                <h5 class="modal-title" id="sellerPLabel">اطلاعات فروشنده</h5>
+                            </div>
+                            <div class="modal-body">
+                                <h6 class="modal-name">سال مد</h6>
+                                <hr>
+                                <div class="modal-rate">
+                                    <p class="rate-title">عملکرد <span class="px-1">3</span> از 5</p>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-4" id="reliability">
+                                                <p class="badge rounded-pill bg-perfect">100%</p>
+                                                <p class="rate-items">تامین به موقع</p>
+                                            </div>
+                                            <div class="col-4" id="sending">
+                                                <p class="badge rounded-pill bg-good">80%</p>
+                                                <p class="rate-items">تعهد ارسال</p>
+                                            </div>
+                                            <div class="col-4" id="returned">
+                                                <p class="badge rounded-pill bg-bad">20%</p>
+                                                <p class="rate-items">بدون مرجوعی</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="guaranty">
+
+                </div>
+                <div class="in-stock">
+
+                </div>
+                <div class="price-p">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#fat">@fat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#mdo">@mdo</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#one">one</a></li>
+              <li><a class="dropdown-item" href="#two">two</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#three">three</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+        <h4 id="fat">@fat</h4>
+        <p>...</p>
+        <h4 id="mdo">@mdo</h4>
+        <p>...</p>
+        <h4 id="one">one</h4>
+        <p>...</p>
+        <h4 id="two">two</h4>
+        <p>...</p>
+        <h4 id="three">three</h4>
+        <p>...</p>
+      </div>
+    <!--footer-->
+    <footer class="container-fluid footer ">
+        <div class="col-lg-12 d-none d-md-block d-lg-block d-xl-block d-xxl-block top ">
+            <a href="#top " class="top-text "><i class="fi-cnluxl-chevron me-1 "></i>برگشت به بالا</a>
+        </div>
+        <div class="container ft-features ">
+            <div class="row ">
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft d-none d-md-none d-lg-none d-xl-block d-xxl-block ">
+                    <a href="# " class="f-features ms-5 "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container ft-features pb-4 d-none d-lg-block ">
+            <div class="row ">
+                <div class="col-lg-2 ">
+                    <h6> <a href="# " class="ft-tt "> راهنمای خرید از دیجی‌کالا</a></h3>
+                        <br>
+                        <a href="# ">نحوه ثبت سفارش</a>
+                        <br>
+                        <a href="# ">رویه ارسال سفارش</a>
+                        <br>
+                        <a href="# ">شیوه‌های پرداخت</a>
+                </div>
+                <div class="col-lg-2 ">
+                    <h6><a href="# " class="ft-tt ">خدمات مشتریان</a></h6>
+                    <br>
+                    <a href="# ">پاسخ به پرسش‌های متداول</a>
+                    <br>
+                    <a href="# ">رویه‌های بازگرداندن کالا</a>
+                    <br>
+                    <a href=" ">شرایط استفاده</a>
+                    <br>
+                    <a href="# ">حریم خصوصی</a>
+                    <br>
+                    <a href="# ">گزارش باگ</a>
+                </div>
+                <div class="col-lg-2 ">
+                    <h6><a href="# " class="ft-tt ">با دیجی‌کالا</a></h6>
+                    <br>
+                    <a href="# ">اتاق خبر دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">فروش در دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">فرصت‌های شغلی</a>
+                    <br>
+                    <a href="# ">تماس با دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">درباره دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">راهنمای هویت بصری</a>
+                </div>
+
+                <div class="col-lg-6 ">
+                    <h6>از تخفیف‌ها و جدیدترین‌های دیجی‌کالا باخبر شوید:</h6>
+                    <form class="d-flex ">
+                        <input class="form-control ft-email " type="email " placeholder="آدرس ایمیل خود را وارد کنید " aria-label="email ">
+                        <button class="btn btn-outline-success ft-email-submit " type="submit ">ارسال</button>
+                    </form>
+                    <p class="so-li ">دیجی‌کالا را در شبکه‌های اجتماعی دنبال کنید:</p>
+                    <a href="# "><i class="fi-xnsux3-instagram ft-Social-Networks me-2 "></i></a>
+                    <a href="# "> <i class="fi-xnsux3-twitter ft-Social-Networks "></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container desktop-footer ">
+            <div class="row ">
+                <div class="col-6 text-end ">
+                    <p>هفت روز هفته ، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم</p>
+                </div>
+                <div class="col-2 ">
+                    <p>شماره تماس : <a href="# ">۶۱۹۳۰۰۰۰ - ۰۲۱</a> </p>
+                </div>
+                <div class="col-4 ">
+                    <p> آدرس ایمیل: <a href="# ">info@digikala.com</a></p>
+                </div>
+                <div class="col d-flex justify-content-center ">
+                    <a href="# "><img src="../multi shop/images/footer/سیب اپ.png " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "><img src="../multi shop/images/footer/مایکت.svg " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "><img src="../multi shop/images/footer/بازار.svg " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "> <img src="../multi shop/images/footer/گوگل پلی.png " alt=" " class="ft-ap "></a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid ft-bootem ">
+            <div class="row ">
+                <div class="col-8 ">
+                    <h6 class="mt-4 ">فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلاین</h6>
+                    <p class="ft-bootem-text "> .دیجی‌کالا به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با بیش از یک دهه تجربه، با پایبندی به سه اصل، پرداخت در محل، 7 روز ضمانت بازگشت کالا و تضمین اصل‌بودن کالا موفق شده تا همگام با فروشگاه‌های معتبر جهان، به بزرگ‌ترین فروشگاه
+                        اینترنتی ایران تبدیل شود. به محض ورود به سایت دیجی‌کالا با دنیایی از کالا رو به رو می‌شوید! هر آنچه که نیاز دارید و به ذهن شما خطور می‌کند در اینجا پیدا خواهید کرد<a href="# ">مشاهده بیشتر</a></p>
+                </div>
+                <div class="col-4 pt-3 ">
+                    <a href="# " class="ft-enamad-b "> <img src="../multi shop/images/footer/نشان ملی.png " alt=" " class="ft-enamad "></a>
+                    <a href="# " class="ft-enamad-b "><img src="../multi shop/images/footer/نماد الکترونیک.png " alt=" " class="ft-enamad "></a>
+                    <a href="# " class="ft-enamad-b "> <img src="../multi shop/images/footer/کسب و کار مجاز.png " alt=" " class="ft-enamad "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/1.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/2.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/3.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/4.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/5.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/6.svg " alt=" "></a>
+                </div>
+            </div>
+        </div>
+        <!--mobile footer-->
+        <div class="container-fluid m-links mb-3 ">
+            <div class="row pb-3 ">
+                <p class="so-li ">ما را در شبکه های اجتماعی دنبال کنید</p>
+                <button class="btn btn-insta "><i class="fi-xnsuxx-instagram me-2 "></i>  اینستاگرام فروشگاه</button>
+            </div>
+            <div class="row ">
+                <div class="col-6 ">
+                    <ul class="list-unstyled text-center text-muted ">
+                        <li><a href="# "><small>نحوه ثبت سفارش</small></a></li>
+                        <li><a href="# "><small>راهنما</small></a></li>
+                        <li><a href="# "><small>درباره ما</small></a></li>
+                        <li><a href="# "><small>اینفوگرافی</small></a></li>
+                        <li><a href="# "><small>گزارش باگ</small></a></li>
+                        <li><a href="# "><small>تماس با ما</small></a></li>
+
+                    </ul>
+                </div>
+                <div class="col-6 ">
+                    <ul class="list-unstyled text-center text-muted ">
+                        <li><a href="# "><small>فروش در سایت</small></a></li>
+                        <li><a href="# "><small>فرصت های شغلی</small></a></li>
+                        <li><a href="# "><small>سوالات متداول</small></a></li>
+                        <li><a href="# "><small>دانلود اپلیکیشن</small></a></li>
+                        <li><a href="# "><small>شرایط استفاده</small></a></li>
+                        <li><a href="# "><small>حریم خصوصی</small></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <h6 class="ft-about-tt text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h6>
+                <p class="ft-about ">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،<span id="dots">...</span><span id="more"> و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی،
+                    و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                    اساسا مورد استفاده قرار گیرد.</span>
+                </p>
+                <div class="dots"></div>
+                <button onclick="myFunction() " id="myBtn" class="more-btn btn">نمایش بیشتر </button>
+            </div>
+
+            <hr class="ft-hr ">
+            <p class="cpr mb-0 "><small>کلیه حقوق این سایت متعلق</small></p>
+            <p class="cpr pb-2 "><small>به شرکت ...................(سایت فروشگاهی) می باشد</small></p>
+        </div>
+    </footer>
+    <!--footer-end-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+    <script src="js/swiper-bundle.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+</body>
+
+
+</html>

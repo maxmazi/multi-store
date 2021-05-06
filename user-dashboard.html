@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="fa">
+
+<head>
+    <title>سایت چند فروشگاهی</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/fav.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.rtl.min.css" integrity="sha384-4dNpRvNX0c/TdYEbYup8qbjvjaMrgUPh+g4I03CnNtANuv+VAvPL6LqdwzZKV38G" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bootstrap-utilities.rtl.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.rtl.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav-style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/user-dashboard.css">
+</head>
+
+<body>
+    <p id="top"></p>
+    <!--navbar-->
+    <div class="container-fluid desktop-nav">
+        <div class="row justify-content-between">
+            <nav class="navbar navbar-light bg-custom px-5 py-4 fixed-top">
+                <div class="container-fluid">
+                    <form class="d-flex col-lg-8">
+                        <a class="navbar-brand me-5 my-auto" href="index.html">LOGO</a>
+                        <input class="form-control me-2 search-form" type="search" placeholder="جستجو در کالاها" aria-label="Search">
+                    </form>
+                    <div class="utilities col-lg-4 d-flex flex-row-reverse my-auto">
+                        <div class="nav-link cart ps-3 py-1"><i class="fi-xnluhx-shopping-cart"></i></div>
+                        <div class="nav-link pe-3 user action py-1" href="#" role="button" onclick="ToggleMenu()">
+                            <i class="fi-xnluxx-user"></i><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#333333"><path d="M40.90017,76.7335l40.033,40.033c2.80217,2.80217 7.33867,2.80217 10.13367,0l40.033,-40.033c4.515,-4.515 1.31867,-12.2335 -5.06683,-12.2335h-80.066c-6.3855,0 -9.58183,7.7185 -5.06683,12.2335z"></path></g></g></svg>
+
+                        </div>
+                        <div class="menu" id="userDash">
+                            <a href="#">
+                                <div class="d-flex">
+                                    <img src="images/avataaars.png" class="avatar" alt="avatar">
+                                    <h6 class="user-name">مازیار حبیب خدا</h6>
+                                </div>
+                                <p class="see text-center mb-5">مشاهده حساب کاربری <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#65cae5"><path d="M71.15783,86l27.38383,-27.38383c2.967,-2.967 2.967,-7.783 0,-10.75v0c-2.967,-2.967 -7.783,-2.967 -10.75,0l-33.067,33.067c-2.80217,2.80217 -2.80217,7.33867 0,10.13367l33.067,33.067c2.967,2.967 7.783,2.967 10.75,0v0c2.967,-2.967 2.967,-7.783 0,-10.75z"></path></g></g></svg></p>
+                            </a>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="see-profile" href="#">
+                                        <div class="d-flex justify-content-between wallet">
+                                            <p class="mb-0"><svg class="me-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#333333"><path d="M37.625,21.5c-8.44,0 -15.38534,6.65577 -16.00602,14.94922c-0.08275,0.38636 -0.12265,0.78067 -0.11898,1.17578v10.75v5.375v80.625c0,8.84188 7.28312,16.125 16.125,16.125h96.75c8.84188,0 16.125,-7.28312 16.125,-16.125v-75.25c0,-8.84188 -7.28312,-16.125 -16.125,-16.125h-96.75c-3.03329,0 -5.375,-2.34171 -5.375,-5.375c0,-3.03329 2.34171,-5.375 5.375,-5.375h89.58333c1.93842,0.02741 3.74144,-0.99102 4.71865,-2.66532c0.97721,-1.6743 0.97721,-3.74507 0,-5.41937c-0.97721,-1.6743 -2.78023,-2.69273 -4.71865,-2.66532zM32.25,53.75h5.375h96.75c3.03329,0 5.375,2.34171 5.375,5.375v75.25c0,3.03329 -2.34171,5.375 -5.375,5.375h-96.75c-3.03329,0 -5.375,-2.34171 -5.375,-5.375zM120.04167,86c-4.94755,0 -8.95833,4.01078 -8.95833,8.95833c0,4.94755 4.01078,8.95833 8.95833,8.95833c4.94755,0 8.95833,-4.01078 8.95833,-8.95833c0,-4.94755 -4.01078,-8.95833 -8.95833,-8.95833z"></path></g></g></svg>کیف
+                                                پول
+                                            </p>
+                                            <p class="ms-2 mb-0"><span class="money">300000</span> تومان</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr>
+                                <li>
+                                    <svg class="me-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#333333"><path d="M51.95833,21.5c-2.96841,0.0003 -5.3747,2.40659 -5.375,5.375v46.58333c0,3.27291 1.01585,6.2316 2.44955,8.95833h-29.32455c-2.96841,0.0003 -5.3747,2.40659 -5.375,5.375v46.58333c0,10.82086 8.88748,19.70833 19.70833,19.70833h37.625c5.67901,0 10.72462,-2.52719 14.33333,-6.41781c3.60871,3.89062 8.65433,6.41781 14.33333,6.41781h37.625c10.82086,0 19.70833,-8.88748 19.70833,-19.70833v-46.58333c-0.0003,-2.96841 -2.40659,-5.3747 -5.375,-5.375h-32.90788c1.4337,-2.72674 2.44955,-5.68542 2.44955,-8.95833v-46.58333c-0.0003,-2.96841 -2.40659,-5.3747 -5.375,-5.375zM57.33333,32.25h53.75v41.20833c0,5.01031 -3.94802,8.95833 -8.95833,8.95833h-16.125h-19.70833c-5.01031,0 -8.95833,-3.94802 -8.95833,-8.95833zM77.04167,43c-1.93842,-0.02741 -3.74144,0.99102 -4.71865,2.66532c-0.97721,1.6743 -0.97721,3.74507 0,5.41937c0.97721,1.6743 2.78023,2.69273 4.71865,2.66532h14.33333c1.93842,0.02741 3.74144,-0.99102 4.71865,-2.66532c0.97721,-1.6743 0.97721,-3.74507 0,-5.41937c-0.97721,-1.6743 -2.78023,-2.69273 -4.71865,-2.66532zM25.08333,93.16667h41.20833h14.33333v41.20833c0,5.01031 -3.94802,8.95833 -8.95833,8.95833h-37.625c-5.01031,0 -8.95833,-3.94802 -8.95833,-8.95833zM91.375,93.16667h10.75h44.79167v41.20833c0,5.01031 -3.94802,8.95833 -8.95833,8.95833h-37.625c-5.01031,0 -8.95833,-3.94802 -8.95833,-8.95833zM44.79167,103.91667c-1.93842,-0.02741 -3.74144,0.99102 -4.71865,2.66532c-0.97721,1.6743 -0.97721,3.74507 0,5.41937c0.97721,1.6743 2.78023,2.69273 4.71865,2.66532h14.33333c1.93842,0.02741 3.74144,-0.99102 4.71865,-2.66532c0.97721,-1.6743 0.97721,-3.74507 0,-5.41937c-0.97721,-1.6743 -2.78023,-2.69273 -4.71865,-2.66532zM112.875,103.91667c-1.93842,-0.02741 -3.74144,0.99102 -4.71865,2.66532c-0.97721,1.6743 -0.97721,3.74507 0,5.41937c0.97721,1.6743 2.78023,2.69273 4.71865,2.66532h14.33333c1.93842,0.02741 3.74144,-0.99102 4.71865,-2.66532c0.97721,-1.6743 0.97721,-3.74507 0,-5.41937c-0.97721,-1.6743 -2.78023,-2.69273 -4.71865,-2.66532z"></path></g></g></svg>
+                                    <a href="#">سفارش های من</a>
+                                </li>
+                                <hr>
+                                <li>
+                                    <svg class="me-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#333333"><path d="M41.20833,21.5c-10.82086,0 -19.70833,8.88748 -19.70833,19.70833v89.58333c0,10.82086 8.88748,19.70833 19.70833,19.70833h64.5c10.82086,0 19.70833,-8.88748 19.70833,-19.70833c0.02741,-1.93842 -0.99102,-3.74144 -2.66532,-4.71865c-1.6743,-0.97721 -3.74507,-0.97721 -5.41937,0c-1.6743,0.97721 -2.69273,2.78023 -2.66532,4.71865c0,5.01031 -3.94802,8.95833 -8.95833,8.95833h-64.5c-5.01031,0 -8.95833,-3.94802 -8.95833,-8.95833v-89.58333c0,-5.01031 3.94802,-8.95833 8.95833,-8.95833h64.5c5.01031,0 8.95833,3.94802 8.95833,8.95833c-0.02741,1.93842 0.99102,3.74144 2.66532,4.71865c1.6743,0.97721 3.74507,0.97721 5.41937,0c1.6743,-0.97721 2.69273,-2.78023 2.66532,-4.71865c0,-10.82086 -8.88748,-19.70833 -19.70833,-19.70833zM119.98568,55.48568c-2.18814,0.00053 -4.1576,1.32735 -4.98006,3.35504c-0.82245,2.0277 -0.33375,4.35156 1.23575,5.87624l15.90804,15.90804h-76.60775c-1.93842,-0.02741 -3.74144,0.99102 -4.71865,2.66532c-0.97721,1.6743 -0.97721,3.74507 0,5.41937c0.97721,1.6743 2.78023,2.69273 4.71865,2.66532h76.60775l-15.90804,15.90804c-1.40412,1.34815 -1.96971,3.35005 -1.47866,5.23364c0.49105,1.88359 1.96202,3.35456 3.84561,3.84561c1.88359,0.49105 3.88549,-0.07455 5.23364,-1.47866l25.08333,-25.08333c2.09823,-2.0991 2.09823,-5.50149 0,-7.60059l-25.08333,-25.08333c-1.01222,-1.0424 -2.4033,-1.63064 -3.85628,-1.6307z"></path></g></g></svg>
+                                    <a href="#">خروج از حساب کاربری</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row justify-content-between snd-nav" id="secondNav">
+            <nav class="navbar navbar-expand-lg navbar-light bg-custom px-5">
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link active me-2 item" aria-current="page" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fi-xnsuxl-three-bars-solid"></i>دسته بندی کالاها</a>
+                                <ul class="dropdown-menu megamenu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link item" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link item" href="#">Pricing</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--mobile nav-->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "70%";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.style.backgroundColor = "#f5f5f5";
+        }
+    </script>
+
+    <div class="navbar mob-nav p-2 mobile-nav m-bg d-flex">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-menu" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size:21px;cursor:pointer;padding-right:15px;">
+                &#9776;
+      </button>
+        <a class="navbar-brand" href="index.html">LOGO</a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog m-modal">
+                <div class="modal-content m-modal-dialog">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-nav row justify-content-between">
+            <nav class="navbar navbar-light bg-custom px-lg-5 py-lg-4 p-xs-0 p-sm-0">
+                <div class="container-fluid mobile-cf">
+                    <form class="d-flex col-lg-8 col-7">
+                        <input class="w-100 mobile-search form-control me-2 search-form" type="search" placeholder="جستجو" aria-label="Search">
+                    </form>
+                    <div class="utilities col-lg-4 col-5 d-flex flex-row-reverse my-auto">
+                        <div class="nav-link cart ps-1 py-1" href="#" role="button"><i class="fi-xwsuhl-shopping-cart"></i></div>
+                        <div class="nav-link pe-2 user py-1" href="#" role="button"><i class="fi-xnsuxl-user"></i></div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--heder-end-->
+
+    <!--main-->
+    <div class="container-fluid Account" style=" max-width: 1490px;    padding-top: 150px;">
+        <div class="row">
+            <div class="col-3 dashbord-d list-account" style="margin-left: 25px; padding: 10px;">
+                <div class="row m-0" style="border-bottom: 1px solid #ededed;">
+                    <div class="col-3">
+                        <img class="pro-avatar" src="images/avataaars.png">
+                    </div>
+                    <div class="col-8 d-flex">
+                        <p class="align-self-center m-0  Profile-name">09033584653</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex align-items-start">
+                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <button class="nav-link text-start active" id="My-orders-tab" data-bs-toggle="pill" data-bs-target="#My-orders" type="button" role="tab" aria-controls="My-orders" aria-selected="true"> <i class="fi-xnluxl-clipboard-list"></i>سفارش های من </button>
+                            <hr class="separator">
+                            <button class="nav-link text-start" id="Lists-tab" data-bs-toggle="pill" data-bs-target="#Lists" type="button" role="tab" aria-controls="Lists" aria-selected="false"><i class="fi-xnsuxl-heart-solid"></i>لیست ها</button>
+                            <hr class="separator">
+                            <button class="nav-link text-start" id="Comments-tab" data-bs-toggle="pill" data-bs-target="#Comments" type="button" role="tab" aria-controls="Comments" aria-selected="false"> <i class="fi-xtluxl-comment-square-thin"></i>نظرات</button>
+                            <hr class="separator">
+                            <button class="nav-link text-start" id="Addresses-tab" data-bs-toggle="pill" data-bs-target="#Addresses" type="button" role="tab" aria-controls="Addresses" aria-selected="false"> <i class="fi-xtluxl-label-thin"></i>نشانی ها</button>
+                            <hr class="separator">
+                            <button class="nav-link text-start" id="gift-card-tab" data-bs-toggle="pill" data-bs-target="#gift-card" type="button" role="tab" aria-controls="gift-card" aria-selected="false"> <i class="fi-xnluxl-credit-card"></i>کارت هدیه</button>
+                            <hr class="separator">
+                            <button class="nav-link text-start" id="Messages-tab" data-bs-toggle="pill" data-bs-target="#Messages" type="button" role="tab" aria-controls="Messages" aria-selected="hr>false"> <i class="fi-xwsuxl-envelope-solid"></i>پیغام ها</button>
+                            <hr class="separator">
+                            <button class="nav-link text-start" id="Recent-Visits-tab" data-bs-toggle="pill" data-bs-target="#Recent-Visits" type="button" role="tab" aria-controls="Recent-Visits" aria-selected="false"> <i class="fi-cwluhl-clock-wide"></i>بازدید های اخیر</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 dashbord-d" style="width: 73%;">
+
+                <div class="container-fluid">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="My-orders" role="tabpanel" aria-labelledby="My-orders-tab">
+
+                            <h4> تاریخچه سفارشات </h4>
+                            <hr style="width: 100px;
+                        color: #fd4040;
+                        opacity: 1;
+                        height: 1.5px;">
+
+                            <div class="row">
+                                <ul class="nav nav-pills mb-3 dashbord" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="Awaiting-Payment-tab" data-bs-toggle="pill" data-bs-target="#Awaiting-Payment" type="button" role="tab" aria-controls="Awaiting-Payment" aria-selected="true">در انتظار پرداخت <span class="badge bg-danger">4</span></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="Processing-tab" data-bs-toggle="pill" data-bs-target="#Processing" type="button" role="tab" aria-controls="Processing" aria-selected="false">در حال پردازش <span class="badge bg-danger">0</span></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="delivered-tab" data-bs-toggle="pill" data-bs-target="#delivered" type="button" role="tab" aria-controls="delivered" aria-selected="false">تحویل داده شده<span class="badge bg-danger">4</span></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="returned-tab" data-bs-toggle="pill" data-bs-target="#returned" type="button" role="tab" aria-controls="returned" aria-selected="false">مرجوعی<span class="badge bg-danger">4</span></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="Canceled-tab" data-bs-toggle="pill" data-bs-target="#Canceled" type="button" role="tab" aria-controls="Canceled" aria-selected="false">لغو شده <span class="badge bg-danger">4</span></button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content Processing" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="Awaiting-Payment" role="tabpanel" aria-labelledby="Awaiting-Payment-tab">در انتظار پرداخت</div>
+                                    <div class="tab-pane fade" id="Processing" role="tabpanel" aria-labelledby="Processing-tab">
+                                        <div class="row Header-b-p">
+                                            <nav style="--bs-breadcrumb-divider: '*';" aria-label="breadcrumb" class="col-6">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"> ۲ فروردین ۱۴۰۰</li>
+                                                    <li class="breadcrumb-item ">DKC-۱۷۸۵۹۱۲۷۳</li>
+                                                    <li class="breadcrumb-item ">در حال آماده‌سازی سفارش</li>
+                                                </ol>
+                                            </nav>
+                                            <a href="#" class="col-6 text-end View-order">مشاهده سفارش<i class="fi-xnslxl-chevron-solid"></i></a>
+                                            <p>مبلغ کل:۸۸۰,۰۰۰</p>
+                                        </div>
+                                        <div class="row py-3 Processing-b">
+                                            <p class="col-8">مرسوله ۱ از ۱</p>
+                                            <div class="col-4 ">
+                                                <p class="order-progressbar-p">بسته بندی</p>
+                                                <div class="order-progressbar">
+                                                    <div class="order-progressbar-d">
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <a class="col-3" href="#">
+                                                <img class="img-order" src="../multi shop/images/m5.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="text-end pt-3">
+                                            <a href="#" class="Processing-payment">پرداخت</a>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="delivered" role="tabpanel" aria-labelledby="delivered-tab">
+                                        <div class="order-list">
+                                            <div class="top-sec">
+                                                <div class="d-flex justify-content-between top-det">
+                                                    <div class="d-flex">
+                                                        <p class="date">
+                                                            <span class="day">12</span>
+                                                            <span class="mounth">اردیبهست</span>
+                                                            <span class="year">1400</span></p>
+                                                        <svg class="mx-1 mt-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="8" height="8" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#cccccc"><path d="M86,157.66667c-39.517,0 -71.66667,-32.14967 -71.66667,-71.66667c0,-39.517 32.14967,-71.66667 71.66667,-71.66667c39.517,0 71.66667,32.14967 71.66667,71.66667c0,39.517 -32.14967,71.66667 -71.66667,71.66667z"></path></g></g></svg>
+                                                        <p class="product-id" id="productId">SLM23546</p>
+                                                        <svg class="mx-1 mt-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="8" height="8" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#cccccc"><path d="M86,157.66667c-39.517,0 -71.66667,-32.14967 -71.66667,-71.66667c0,-39.517 32.14967,-71.66667 71.66667,-71.66667c39.517,0 71.66667,32.14967 71.66667,71.66667c0,39.517 -32.14967,71.66667 -71.66667,71.66667z"></path></g></g></svg>
+                                                        <p class="status">تحویل داده شده</p>
+                                                    </div>
+                                                    <a href="#" class="order-details">مشاهده سفارش<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#30bdff"><path d="M71.15783,86l27.38383,-27.38383c2.967,-2.967 2.967,-7.783 0,-10.75v0c-2.967,-2.967 -7.783,-2.967 -10.75,0l-33.067,33.067c-2.80217,2.80217 -2.80217,7.33867 0,10.13367l33.067,33.067c2.967,2.967 7.783,2.967 10.75,0v0c2.967,-2.967 2.967,-7.783 0,-10.75z"></path></g></g></svg></a>
+
+                                                </div>
+                                                <p class="price"><span class="total-price">مبلغ کل:</span><span class="mx-1">7600000</span class="tmn">تومان</p>
+                                            </div>
+                                            <div class="order-img">
+                                                <img class="product-img" role="button" src="images/m3.jpg" alt="product">
+                                            </div>
+                                            <div class="factor pt-3">
+                                               <p class="text-end"> <a href="#" class="order-details bot-sec">مشاهده فاکتور</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="order-list">
+                                            <div class="top-sec">
+                                                <div class="d-flex justify-content-between top-det">
+                                                    <div class="d-flex">
+                                                        <p class="date">
+                                                            <span class="day">12</span>
+                                                    <span class="mounth">اردیبهست</span>
+                                                    <span class="year">1400</span></p>
+                                                <svg class="mx-1 mt-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="8" height="8" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#cccccc"><path d="M86,157.66667c-39.517,0 -71.66667,-32.14967 -71.66667,-71.66667c0,-39.517 32.14967,-71.66667 71.66667,-71.66667c39.517,0 71.66667,32.14967 71.66667,71.66667c0,39.517 -32.14967,71.66667 -71.66667,71.66667z"></path></g></g></svg>
+                                                <p class="product-id" id="productId">SLM23546</p>
+                                                <svg class="mx-1 mt-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="8" height="8" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#cccccc"><path d="M86,157.66667c-39.517,0 -71.66667,-32.14967 -71.66667,-71.66667c0,-39.517 32.14967,-71.66667 71.66667,-71.66667c39.517,0 71.66667,32.14967 71.66667,71.66667c0,39.517 -32.14967,71.66667 -71.66667,71.66667z"></path></g></g></svg>
+                                                <p class="status">تحویل داده شده</p>
+                                            </div>
+                                            <a href="#" class="order-details">مشاهده سفارش<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#30bdff"><path d="M71.15783,86l27.38383,-27.38383c2.967,-2.967 2.967,-7.783 0,-10.75v0c-2.967,-2.967 -7.783,-2.967 -10.75,0l-33.067,33.067c-2.80217,2.80217 -2.80217,7.33867 0,10.13367l33.067,33.067c2.967,2.967 7.783,2.967 10.75,0v0c2.967,-2.967 2.967,-7.783 0,-10.75z"></path></g></g></svg></a>
+
+                                        </div>
+                                        <p class="price"><span class="total-price">مبلغ کل:</span><span class="mx-1">7600000</span class="tmn">تومان</p>
+                                            </div>
+                                            <div class="order-img">
+                                                <img class="product-img" role="button" src="images/m1.jpg" alt="product">
+                                                <img class="product-img" role="button" src="images/m3.jpg" alt="product">
+                                                <img class="product-img" role="button" src="images/m5.jpg" alt="product">
+                                            </div>
+                                            <div class="factor pt-3">
+                                               <p class="text-end"> <a href="#" class="order-details bot-sec">مشاهده فاکتور</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="order-list">
+                                            <div class="top-sec">
+                                                <div class="d-flex justify-content-between top-det">
+                                                    <div class="d-flex">
+                                                        <p class="date">
+                                                            <span class="day">12</span>
+                                            <span class="mounth">اردیبهست</span>
+                                            <span class="year">1400</span></p>
+                                        <svg class="mx-1 mt-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="8" height="8" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#cccccc"><path d="M86,157.66667c-39.517,0 -71.66667,-32.14967 -71.66667,-71.66667c0,-39.517 32.14967,-71.66667 71.66667,-71.66667c39.517,0 71.66667,32.14967 71.66667,71.66667c0,39.517 -32.14967,71.66667 -71.66667,71.66667z"></path></g></g></svg>
+                                        <p class="product-id" id="productId">SLM23546</p>
+                                        <svg class="mx-1 mt-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="8" height="8" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#cccccc"><path d="M86,157.66667c-39.517,0 -71.66667,-32.14967 -71.66667,-71.66667c0,-39.517 32.14967,-71.66667 71.66667,-71.66667c39.517,0 71.66667,32.14967 71.66667,71.66667c0,39.517 -32.14967,71.66667 -71.66667,71.66667z"></path></g></g></svg>
+                                        <p class="status">تحویل داده شده</p>
+                                    </div>
+                                    <a href="#" class="order-details">مشاهده سفارش<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#30bdff"><path d="M71.15783,86l27.38383,-27.38383c2.967,-2.967 2.967,-7.783 0,-10.75v0c-2.967,-2.967 -7.783,-2.967 -10.75,0l-33.067,33.067c-2.80217,2.80217 -2.80217,7.33867 0,10.13367l33.067,33.067c2.967,2.967 7.783,2.967 10.75,0v0c2.967,-2.967 2.967,-7.783 0,-10.75z"></path></g></g></svg></a>
+
+                                </div>
+                                <p class="price"><span class="total-price">مبلغ کل:</span><span class="mx-1">5400000</span class="tmn">تومان</p>
+                                            </div>
+                                            <div class="order-img">
+                                                <img class="product-img" role="button" src="images/m2.jpg" alt="product">
+                                            </div>
+                                            <div class="factor pt-3">
+                                               <p class="text-end"> <a href="#" class="order-details bot-sec">مشاهده فاکتور</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="returned" role="tabpanel" aria-labelledby="returned-tab">مرجوعی</div>
+                                    <div class="tab-pane fade" id="Canceled" role="tabpanel" aria-labelledby="Canceled-tab">لغو شده</div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="tab-pane fade" id="Lists" role="tabpanel" aria-labelledby="Lists-tab">
+                            <div class="row">
+                                <ul class="nav nav-pills mb-3 dashbord" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="Favorite-goods-tab" data-bs-toggle="pill" data-bs-target="#Favorite-goods" type="button" role="tab" aria-controls="Favorite-goods" aria-selected="true">کالا های مورد علاقه </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="Notices-tab" data-bs-toggle="pill" data-bs-target="#Notices" type="button" role="tab" aria-controls="Notices" aria-selected="false">اطلاع رسانی</button>
+                                    </li>
+
+                                </ul>
+                                <div class="tab-content Processing" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="Favorite-goods" role="tabpanel" aria-labelledby="Favorite-goods-tab">
+
+                                        <div class="row">
+                                            <div class="col-6 row">
+                                                <a class="col-3" href="#">
+                                                    <img class="img-order-f" src="../multi shop/images/m5.jpg" alt="">
+                                                </a>
+                                                <div class="col-9">
+                                                    <div style="    height: 70px; font-size: 15px;">
+                                                        <a style=" font-size: 15px;">دسته بازی تسکو مدل TG 170W </a>
+
+                                                    </div>
+
+                                                    <p class="Toman-span">930,000 <span>تومان</span></p>
+                                <a href="#" class="col-6 text-end View-order">مشاهده محصول<i class="fi-xnslxl-chevron-solid"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="Notices" role="tabpanel" aria-labelledby="Notices-tab">
+
+                </div>
+                <div class="tab-pane fade" id="Comments" role="tabpanel" aria-labelledby="Comments-tab">نظرات</div>
+                <div class="tab-pane fade" id="Addresses" role="tabpanel" aria-labelledby="Addresses-tab">نشانی ها</div>
+                <div class="tab-pane fade" id="gift-card" role="tabpanel" aria-labelledby="gift-card-tab">کارت هدیه</div>
+                <div class="tab-pane fade" id="Messages" role="tabpanel" aria-labelledby="Messages-tab">پیغام ها</div>
+                <div class="tab-pane fade" id="Recent-Visits" role="tabpanel" aria-labelledby="Recent-Visits-tab">بازدید های اخیر</div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+    <!--footer-star-->
+    <footer class="container-fluid footer ">
+        <div class="col-lg-12 d-none d-md-block d-lg-block d-xl-block d-xxl-block top ">
+            <a href="#top " class="top-text "><i class="fi-cnluxl-chevron me-1 "></i>برگشت به بالا</a>
+        </div>
+        <div class="container ft-features ">
+            <div class="row ">
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft ">
+                    <a href="# " class="f-features "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ft d-none d-md-none d-lg-none d-xl-block d-xxl-block ">
+                    <a href="# " class="f-features ms-5 "> <img src="../multi shop/images/footer/تحویل.svg " alt=" " class="ft-icon ">
+                        <p class="ft-text ">ضمانت اصل بودن</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container ft-features pb-4 d-none d-lg-block ">
+            <div class="row ">
+                <div class="col-lg-2 ">
+                    <h6> <a href="# " class="ft-tt "> راهنمای خرید از دیجی‌کالا</a></h3>
+                        <br>
+                        <a href="# ">نحوه ثبت سفارش</a>
+                        <br>
+                        <a href="# ">رویه ارسال سفارش</a>
+                        <br>
+                        <a href="# ">شیوه‌های پرداخت</a>
+                </div>
+                <div class="col-lg-2 ">
+                    <h6><a href="# " class="ft-tt ">خدمات مشتریان</a></h6>
+                    <br>
+                    <a href="# ">پاسخ به پرسش‌های متداول</a>
+                    <br>
+                    <a href="# ">رویه‌های بازگرداندن کالا</a>
+                    <br>
+                    <a href=" ">شرایط استفاده</a>
+                    <br>
+                    <a href="# ">حریم خصوصی</a>
+                    <br>
+                    <a href="# ">گزارش باگ</a>
+                </div>
+                <div class="col-lg-2 ">
+                    <h6><a href="# " class="ft-tt ">با دیجی‌کالا</a></h6>
+                    <br>
+                    <a href="# ">اتاق خبر دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">فروش در دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">فرصت‌های شغلی</a>
+                    <br>
+                    <a href="# ">تماس با دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">درباره دیجی‌کالا</a>
+                    <br>
+                    <a href="# ">راهنمای هویت بصری</a>
+                </div>
+
+                <div class="col-lg-6 ">
+                    <h6>از تخفیف‌ها و جدیدترین‌های دیجی‌کالا باخبر شوید:</h6>
+                    <form class="d-flex ">
+                        <input class="form-control ft-email " type="email " placeholder="آدرس ایمیل خود را وارد کنید " aria-label="email ">
+                        <button class="btn btn-outline-success ft-email-submit " type="submit ">ارسال</button>
+                    </form>
+                    <p class="so-li ">دیجی‌کالا را در شبکه‌های اجتماعی دنبال کنید:</p>
+                    <a href="# "><i class="fi-xnsux3-instagram ft-Social-Networks me-2 "></i></a>
+                    <a href="# "> <i class="fi-xnsux3-twitter ft-Social-Networks "></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container desktop-footer ">
+            <div class="row ">
+                <div class="col-6 text-end ">
+                    <p>هفت روز هفته ، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم</p>
+                </div>
+                <div class="col-2 ">
+                    <p>شماره تماس : <a href="# ">۶۱۹۳۰۰۰۰ - ۰۲۱</a> </p>
+                </div>
+                <div class="col-4 ">
+                    <p> آدرس ایمیل: <a href="# ">info@digikala.com</a></p>
+                </div>
+                <div class="col d-flex justify-content-center ">
+                    <a href="# "><img src="../multi shop/images/footer/سیب اپ.png " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "><img src="../multi shop/images/footer/مایکت.svg " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "><img src="../multi shop/images/footer/بازار.svg " alt=" " class="ft-ap me-2 "></a>
+                    <a href="# "> <img src="../multi shop/images/footer/گوگل پلی.png " alt=" " class="ft-ap "></a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid ft-bootem ">
+            <div class="row ">
+                <div class="col-8 ">
+                    <h6 class="mt-4 ">فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلاین</h6>
+                    <p class="ft-bootem-text "> .دیجی‌کالا به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با بیش از یک دهه تجربه، با پایبندی به سه اصل، پرداخت در محل، 7 روز ضمانت بازگشت کالا و تضمین اصل‌بودن کالا موفق شده تا همگام با فروشگاه‌های معتبر جهان، به بزرگ‌ترین فروشگاه
+                        اینترنتی ایران تبدیل شود. به محض ورود به سایت دیجی‌کالا با دنیایی از کالا رو به رو می‌شوید! هر آنچه که نیاز دارید و به ذهن شما خطور می‌کند در اینجا پیدا خواهید کرد<a href="# ">مشاهده بیشتر</a></p>
+                </div>
+                <div class="col-4 pt-3 ">
+                    <a href="# " class="ft-enamad-b "> <img src="../multi shop/images/footer/نشان ملی.png " alt=" " class="ft-enamad "></a>
+                    <a href="# " class="ft-enamad-b "><img src="../multi shop/images/footer/نماد الکترونیک.png " alt=" " class="ft-enamad "></a>
+                    <a href="# " class="ft-enamad-b "> <img src="../multi shop/images/footer/کسب و کار مجاز.png " alt=" " class="ft-enamad "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/1.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/2.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/3.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/4.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/5.svg " alt=" "></a>
+                </div>
+                <div class="col ">
+                    <a href="# "><img src="../multi shop/images/footer/New folder/6.svg " alt=" "></a>
+                </div>
+            </div>
+        </div>
+        <!--mobile footer-->
+        <div class="container-fluid m-links mb-3 ">
+            <div class="row pb-3 ">
+                <p class="so-li ">ما را در شبکه های اجتماعی دنبال کنید</p>
+                <button class="btn btn-insta "><i class="fi-xnsuxx-instagram me-2 "></i>  اینستاگرام فروشگاه</button>
+            </div>
+            <div class="row ">
+                <div class="col-6 ">
+                    <ul class="list-unstyled text-center text-muted ">
+                        <li><a href="# "><small>نحوه ثبت سفارش</small></a></li>
+                        <li><a href="# "><small>راهنما</small></a></li>
+                        <li><a href="# "><small>درباره ما</small></a></li>
+                        <li><a href="# "><small>اینفوگرافی</small></a></li>
+                        <li><a href="# "><small>گزارش باگ</small></a></li>
+                        <li><a href="# "><small>تماس با ما</small></a></li>
+
+                    </ul>
+                </div>
+                <div class="col-6 ">
+                    <ul class="list-unstyled text-center text-muted ">
+                        <li><a href="# "><small>فروش در سایت</small></a></li>
+                        <li><a href="# "><small>فرصت های شغلی</small></a></li>
+                        <li><a href="# "><small>سوالات متداول</small></a></li>
+                        <li><a href="# "><small>دانلود اپلیکیشن</small></a></li>
+                        <li><a href="# "><small>شرایط استفاده</small></a></li>
+                        <li><a href="# "><small>حریم خصوصی</small></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <h6 class="ft-about-tt text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h6>
+                <p class="ft-about ">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،<span id="dots">...</span><span id="more"> و برای شرایط فعلی تکنولوژی مورد
+                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی،
+                و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                اساسا مورد استفاده قرار گیرد.</span>
+                </p>
+                <div class="dots"></div>
+                <button onclick="myFunction() " id="myBtn" class="more-btn btn">نمایش بیشتر </button>
+            </div>
+
+            <hr class="ft-hr ">
+            <p class="cpr mb-0 "><small>کلیه حقوق این سایت متعلق</small></p>
+            <p class="cpr pb-2 "><small>به شرکت ...................(سایت فروشگاهی) می باشد</small></p>
+        </div>
+    </footer>
+    <!--footer-end-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+
+</html>

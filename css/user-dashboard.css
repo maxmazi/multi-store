@@ -1,0 +1,184 @@
+.snd-nav {
+    margin-top: 81px;
+}
+
+.pro-avatar {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.dote {
+    font-size: 25px;
+    color: #9c9c9c;
+    font-weight: 600;
+}
+
+.order-details {
+    color: #30BDFF;
+    font-weight: 650;
+}
+
+.price {
+    color: #222 !important;
+}
+
+.order-details:hover {
+    color: #30bdff;
+}
+
+.top-det {
+    padding-bottom: 30px;
+}
+
+.top-sec .price .total-price {
+    color: #a0a0a0;
+}
+
+.top-sec,
+.order-img {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.top-sec p {
+    font-size: 13px;
+    color: #4d4d4d;
+}
+
+.order-img {
+    cursor: default;
+}
+
+.product-img {
+    cursor: pointer;
+}
+
+.order-img img {
+    width: 80px;
+    height: auto;
+    margin: 15px;
+}
+
+.bot-sec {
+    color: #30bdff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.dashbord .active {
+    background-color: transparent !important;
+    border-bottom: 2px solid red;
+    color: red !important;
+    border-radius: 0;
+}
+
+.dashbord-d {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ededed;
+    padding: 30px;
+}
+
+.Profile-picture {
+    font-size: 50px;
+    background: #dedede;
+    border-radius: 50%;
+    color: white;
+}
+
+#v-pills-tab {
+    width: 100%;
+}
+
+#My-orders-tab {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.fi-padding {
+    padding-bottom: 0em;
+    margin-left: 15px;
+}
+
+.separator {
+    color: #c5c5c5 !important;
+}
+
+.Profile-name {
+    color: #9c9c9c;
+}
+
+.dashbord {
+    border-bottom: 1px solid #ededed;
+}
+
+.list-account .active {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    color: #11d8d8 !important;
+}
+
+.Header-b-p {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.order-progressbar {
+    width: 100%;
+    height: 5px;
+    background: #eaeaea;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.order-progressbar-d {
+    width: 33%;
+    height: 100%;
+    background: #299855;
+    border-radius: 5px;
+}
+
+.order-progressbar-p {
+    color: #299855;
+}
+
+.img-order {
+    width: 35%;
+}
+
+.order-list {
+    padding: 20px 12px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.Processing-b {
+    border-bottom: 1px solid #eae9e9;
+}
+
+.Processing-payment {
+    background: #ff6767;
+    color: #fff;
+    padding: 5px 15px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+}
+
+.View-order {
+    color: #43c6e4;
+    font-size: 15px;
+}
+
+.img-order-f {
+    width: 100%;
+}
+
+.Toman-span span {
+    font-size: 10px;
+    color: #6b6b6b;
+}
+
+.Toman-span {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
