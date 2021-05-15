@@ -191,3 +191,13 @@ function show() {
     const togglemenu = document.querySelector('#tooltips');
     togglemenu.classList.toggle('active');
 }
+
+/*-----------off submit button------------*/
+function EnableDisable(offCode) {
+    let submit = document.getElementById("Submit");
+    if (offCode.value.trim() != "") {
+        submit.disabled = false;
+    } else {
+        submit.disabled = true;
+    }
+}

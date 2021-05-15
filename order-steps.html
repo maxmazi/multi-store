@@ -96,29 +96,58 @@
                                     </div>
                                 </div>
                                 <!--single form panel-->
-                                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                                    <h3 class="multisteps-form__title">Your Address</h3>
-                                    <div class="multisteps-form__content">
+                                <div class="multisteps-form__panel payment " data-animation="scaleIn">
+
+                                    <div class="multisteps-form__content card">
+                                        <h3 class="multisteps-form__title">شیوه پرداخت</h3>
                                         <div class="pay-method">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="online" id="online">
+                                            <div class="form-check mt-3">
+                                                <input class="form-check-input" type="radio" name="wallet" id="wallet">
                                                 <label class="form-check-label" for="online">
-                                                  پرداخت آنلاین
+                                                    افزایش اعتبار و پرداخت از کیف پول
                                                 </label>
                                             </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="local" id="local" checked>
+                                            <hr class="separator">
+                                            <div class="form-check mt-3">
+                                                <input class="form-check-input" type="radio" name="online" id="online" checked>
+                                                <label class="form-check-label" for="online">
+                                                    پرداخت آنلاین
+                                                </label>
+                                            </div>
+                                            <hr class="separator">
+                                            <div class="form-check mt-3">
+                                                <input class="form-check-input" type="radio" name="local" id="local">
                                                 <label class="form-check-label" for="local">
                                                   پرداخت در محل یا کارت بانکی
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="button-row d-flex mt-4">
-                                            <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
-                                            <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+
+                                    </div>
+                                    <div class="off-coupon">
+                                        <div class="accordion" id="off-code">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#offCollapse" aria-expanded="false" aria-controls="collapseOne">
+                                                    کد تخفیف
+                                                </button>
+                                                </h2>
+                                                <div id="offCollapse" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#off-code">
+                                                    <div class="accordion-body">
+                                                        <input type="text" id="offCode" name="off-code" class="off-input" placeholder="افزودن کد تخفیف" onkeyup="EnableDisable(this)">
+                                                        <input type="button" class="off-btn" id="Submit" value="ثبت" disabled="disabled">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="button-row d-flex mt-4">
+                                        <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                                        <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                                    </div>
                                 </div>
+
+
                                 <!--single form panel-->
                                 <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
                                     <h3 class="multisteps-form__title">Your Order Info</h3>

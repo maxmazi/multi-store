@@ -110,7 +110,7 @@ function ToggleMenu() {
 
 let latestScroll = 0
 window.onscroll = function() {
-    var nav = document.getElementById('secondNav');
+    let nav = document.getElementById('secondNav');
     if (window.pageYOffset > 200) {
         nav.classList.add("navbar2");
         latestScroll = window.pageYOffset
@@ -143,21 +143,3 @@ function myFunction() {
         moreText.style.display = "inline";
     }
 }
-
-/*bttb*/
-$(document).ready(function() {
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 20) {
-            $('#toTopBtn').fadeIn();
-        } else {
-            $('#toTopBtn').fadeOut();
-        }
-    });
-
-    $('#toTopBtn').click(function() {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 1000);
-        return false;
-    });
-});
