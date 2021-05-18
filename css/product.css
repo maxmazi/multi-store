@@ -173,7 +173,7 @@ img {
     z-index: 2;
 }
 
-input {
+.main input {
     display: none;
 }
 
@@ -367,6 +367,7 @@ input {
     background-color: #fff;
     z-index: 100;
     border-bottom: 1px solid #eaeaea;
+    margin-bottom: 150px;
 }
 
 .prop-nav .nav-link {
@@ -416,6 +417,7 @@ input {
     margin-top: 15px;
     margin-right: 20px;
     border-radius: 12px;
+    margin-bottom: 150px;
 }
 
 .odi {
@@ -585,7 +587,17 @@ input {
     margin-top: 100px;
 }
 
+.mobile {
+    display: none;
+}
+
 @media (max-width:564px) {
+    .desktop {
+        display: none !important;
+    }
+    .mobile {
+        display: block !important;
+    }
     .desktop-p {
         display: none;
     }
@@ -749,5 +761,104 @@ input {
         font-size: 11px;
         font-weight: 100;
         color: #747474;
+    }
+    .properties {
+        margin: 0;
+        font-size: 12px;
+        padding: 15px 5px 5px 5px;
+    }
+    .more {
+        color: #10c9e8;
+        cursor: pointer;
+    }
+    .more:hover {
+        color: #10c9e8;
+    }
+    .prop-list {
+        padding: 0;
+    }
+    .mobile .prop-list li::marker {
+        list-style: circle;
+        color: #c4c4c4;
+    }
+    .prop-list p {
+        color: #585858;
+        margin-bottom: 5px;
+    }
+    .properties .card-body {
+        padding-bottom: 5px;
+    }
+    .back-a {
+        position: absolute;
+        top: 18px;
+        right: 10px;
+        transform: rotate(180deg);
+    }
+    #propertiesLabel {
+        margin-right: 25px;
+    }
+    #propertiesModal .modal-body {
+        width: 100%;
+        padding: 0;
+        font-size: 12px;
+    }
+    #propertiesModal .modal-body p {
+        margin-bottom: 0;
+    }
+    .li-title {
+        background-color: #eaeaea;
+        padding: 3px 10px;
+        margin: 3px 0;
+    }
+    .li-sub {
+        padding: 5px 10px;
+        margin: 3px 0;
+    }
+    .comments {
+        padding: 5px;
+    }
+    .comments .card-body {
+        padding-right: 0;
+        padding-left: 5px
+    }
+    .give-cmt {
+        font-size: 12px;
+        color: #555;
+    }
+    .give-cmt p {
+        margin-bottom: 0;
+    }
+    .mcmt-btn {
+        font-size: 12px;
+        background-color: #fff;
+        border: 1px solid #10c9e8;
+        color: #10c9e8;
+        border-radius: 5px;
+        padding: 2px 5px;
+    }
+    .mcmt-btn:hover {
+        color: #10c9e8;
+    }
+    #commentModal .card-body .mainrange {
+        position: relative;
+    }
+    #commentModal .form-label {
+        font-size: 13px;
+    }
+    #buyValue {
+        -webkit-appearance: none;
+        width: 55%;
+        height: 4px;
+        outline: none;
+        border-radius: 3px;
+        background-color: #eaeaea;
+        margin-top: 8px;
+    }
+    #buyValue::-webkit-slider-thumb {
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+        z-index: 3;
+        position: relative;
     }
 }
