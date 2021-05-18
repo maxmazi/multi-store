@@ -845,20 +845,352 @@ img {
     #commentModal .form-label {
         font-size: 13px;
     }
-    #buyValue {
-        -webkit-appearance: none;
-        width: 55%;
-        height: 4px;
-        outline: none;
-        border-radius: 3px;
-        background-color: #eaeaea;
-        margin-top: 8px;
+    .cmtft {
+        width: 60%;
+        height: 30px;
     }
-    #buyValue::-webkit-slider-thumb {
-        width: 10px;
-        height: 10px;
-        cursor: pointer;
-        z-index: 3;
-        position: relative;
+    .cmtft:focus {
+        border: 2px solid #10c9e8;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    .cmtf-btn {
+        border: 1px solid #10c9e8;
+        width: 35%;
+        height: 30px;
+        line-height: 0;
+        color: #10c9e8;
+        font-size: 12px;
+    }
+    .cmtf-btn:hover {
+        color: #10c9e8;
+    }
+    .unknown-user {
+        font-size: 13px;
+    }
+    ..form-check-input[type="checkbox"]:focus {
+        border: 2px solid #10c9e8;
+        background-color: #17c4e2;
+    }
+    #commentModal hr {
+        opacity: 0.1;
+    }
+    .cmt-sub-btn {
+        width: 100%;
+        height: 35px;
+        background-color: #17c4e2;
+        color: #fff;
+    }
+    .rule-acc {
+        font-size: 12px;
+    }
+    .rule {
+        color: #17c4e2;
+    }
+    .rule:hover {
+        color: #17c4e2;
     }
 }
+
+@media (min-width:565px) and (max-width:786px) {
+    .desktop {
+        display: none !important;
+    }
+    .mobile {
+        display: block !important;
+    }
+    .desktop-p {
+        display: none;
+    }
+    .mobile-product {
+        display: block;
+    }
+    .mobile-p {
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(100, 100, 100, 0.2);
+        margin: 5px;
+        border: none;
+    }
+    .mobile-p .card-header {
+        background-color: #fff;
+    }
+    .dbc {
+        display: none;
+    }
+    .mbread {
+        display: block;
+        background-color: #f5f5f5;
+        padding: 10px;
+        margin: 0;
+        font-size: 12px;
+    }
+    .mbread ol {
+        margin-bottom: 0;
+    }
+    .mbread .active {
+        color: #41d6f7;
+    }
+    .m-hr {
+        padding: 0;
+        color: #a3a3a3;
+    }
+    .spc-off {
+        font-size: 11px;
+        color: #ff112d;
+        font-weight: 600;
+        margin: 5px 5px 5px 10px;
+        border-bottom: 1px solid #ff112d;
+        padding-bottom: 5px;
+    }
+    .p-title {
+        font-size: 11px;
+        color: #555;
+    }
+    .p-th {
+        width: 150px;
+        height: auto;
+        border: none;
+    }
+    /*swiper slider*/
+    .product-slider {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .product-pagination {
+        top: 100px;
+        position: initial;
+        margin: 0 auto;
+    }
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: var(--swiper-pagination-color, #10c9e8);
+    }
+    .sn {
+        font-size: 11px !important;
+        line-height: 28px;
+    }
+    .under-pro {
+        font-size: 11px;
+        color: #747474;
+    }
+    .m-brand a,
+    .m-cat a {
+        font-size: 11px !important;
+        color: #41d6f7 !important;
+        font-weight: 300 !important;
+    }
+    .rt {
+        border-left: 1px solid #c0c2c5;
+    }
+    .card-footer {
+        background-color: #fff !important;
+        border: none;
+    }
+    .names {
+        font-size: 11px;
+        color: #555;
+    }
+    .snames {
+        font-size: 11px;
+        color: #10c9e8;
+    }
+    .ratings {
+        font-size: 11px;
+        color: #10c9e8;
+    }
+    .seller-rate {
+        border-left: 1px solid #d8d8d8;
+    }
+    .arrow {
+        position: absolute;
+        left: 5px;
+        margin-top: 4%;
+    }
+    .modal-header .btn-close {
+        margin: 0;
+    }
+    .modal-title {
+        font-size: 14px;
+        color: #555;
+    }
+    .modal-name {
+        font-weight: 500;
+        font-size: 11px;
+        color: #555;
+    }
+    .rate-title {
+        font-size: 11px;
+        color: #555;
+    }
+    .bg-perfect {
+        background-color: #08d04b61;
+        color: #0fc259;
+        font-size: 13px;
+        margin-right: 15%;
+    }
+    .bg-good {
+        background-color: #a6ff008e;
+        color: #59c500;
+        font-size: 13px;
+        margin-right: 15%;
+    }
+    .bg-bad {
+        background-color: #ff00004f;
+        color: #c20000;
+        font-size: 13px;
+        margin-right: 15%;
+    }
+    .rate-items {
+        font-size: 11px;
+        font-weight: 100;
+        color: #747474;
+    }
+    .properties {
+        margin: 0;
+        font-size: 12px;
+        padding: 15px 5px 5px 5px;
+    }
+    .more {
+        color: #10c9e8;
+        cursor: pointer;
+    }
+    .more:hover {
+        color: #10c9e8;
+    }
+    .prop-list {
+        padding: 0;
+    }
+    .mobile .prop-list li::marker {
+        list-style: circle;
+        color: #c4c4c4;
+    }
+    .prop-list p {
+        color: #585858;
+        margin-bottom: 5px;
+    }
+    .properties .card-body {
+        padding-bottom: 5px;
+    }
+    .back-a {
+        position: absolute;
+        top: 18px;
+        right: 10px;
+        transform: rotate(180deg);
+    }
+    #propertiesLabel {
+        margin-right: 25px;
+    }
+    #propertiesModal .modal-body {
+        width: 100%;
+        padding: 0;
+        font-size: 12px;
+    }
+    #propertiesModal .modal-body p {
+        margin-bottom: 0;
+    }
+    .li-title {
+        background-color: #eaeaea;
+        padding: 3px 10px;
+        margin: 3px 0;
+    }
+    .li-sub {
+        padding: 5px 10px;
+        margin: 3px 0;
+    }
+    .comments {
+        padding: 5px;
+    }
+    .comments .card-body {
+        padding-right: 0;
+        padding-left: 5px
+    }
+    .give-cmt {
+        font-size: 12px;
+        color: #555;
+    }
+    .give-cmt p {
+        margin-bottom: 0;
+    }
+    .mcmt-btn {
+        font-size: 12px;
+        background-color: #fff;
+        border: 1px solid #10c9e8;
+        color: #10c9e8;
+        border-radius: 5px;
+        padding: 2px 5px;
+    }
+    .mcmt-btn:hover {
+        color: #10c9e8;
+    }
+    #commentModal .card-body .mainrange {
+        position: relative;
+    }
+    #commentModal .form-label {
+        font-size: 13px;
+    }
+    .cmtft {
+        width: 60%;
+        height: 30px;
+    }
+    .cmtft:focus {
+        border: 2px solid #10c9e8;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    .cmtf-btn {
+        border: 1px solid #10c9e8;
+        width: 35%;
+        height: 30px;
+        line-height: 0;
+        color: #10c9e8;
+        font-size: 12px;
+    }
+    .cmtf-btn:hover {
+        color: #10c9e8;
+    }
+    .unknown-user {
+        font-size: 13px;
+    }
+    ..form-check-input[type="checkbox"]:focus {
+        border: 2px solid #10c9e8;
+        background-color: #17c4e2;
+    }
+    #commentModal hr {
+        opacity: 0.1;
+    }
+    .cmt-sub-btn {
+        width: 100%;
+        height: 35px;
+        background-color: #17c4e2;
+        color: #fff;
+    }
+    .rule-acc {
+        font-size: 12px;
+    }
+    .rule {
+        color: #17c4e2;
+    }
+    .rule:hover {
+        color: #17c4e2;
+    }
+}
+
+@media (min-width:787px) and (max-width:1000px) {}
+
+@media (min-width:1001px) and (max-width:1200px) {}

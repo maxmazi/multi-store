@@ -1091,19 +1091,63 @@
                             امتیاز شما به این محصول
                         </h5>
                         <hr>
-                        <div class="d-flex justify-content-between" style="position: relative;">
-                            <label for="buyValue" class="form-label">ارزش خرید</label>
-                            <input type="range" min="1" max="5" value="1" id="buyValue">
-                            <div id="selector">
-                                <div class="selectorbtn"></div>
-                            </div>
-                            <div id="progressBar"></div>
+                        <div class="d-flex justify-content-between">
+                            <label for="speed" class="form-label">ارزش خرید</label>
+                            <input type="range" class="form-range w-50 ms-2" min="1" max="5" value="1" step="1" id="speed">
                         </div>
+                        <div class="d-flex justify-content-between mt-3">
+                            <label for="overclock" class="form-label">ارزش خرید</label>
+                            <input type="range" class="form-range w-50 ms-2" min="1" max="5" value="1" step="1" id="overclock">
+                        </div>
+                        <div class="d-flex justify-content-between mt-3">
+                            <label for="cool" class="form-label">ارزش خرید</label>
+                            <input type="range" class="form-range w-50 ms-2" min="1" max="5" value="1" step="1" id="cool">
+                        </div>
+                        <div class="d-flex justify-content-between mt-3">
+                            <label for="quality" class="form-label">ارزش خرید</label>
+                            <input type="range" class="form-range w-50 ms-2" min="1" max="5" value="1" step="1" id="quality">
+                        </div>
+                        <hr>
+                        <div class="cmt-field">
+                            <div class="cmtf-title">
+                                <label for="cmtfTitle" class="form-label">عنوان</label>
+                                <input type="text" class="form-control cmtft" id="cmtfTitel">
+
+                            </div>
+                            <div class="cmtf-title mt-3">
+                                <label for="cmtfTitle" class="form-label text-danger">نقاط ضعف</label>
+                                <div class="d-flex justify-content-between">
+                                    <input type="text" class="form-control cmtft" id="cmtfTitel">
+                                    <button type="submit" class="btn cmtf-btn">ثبت</button>
+                                </div>
+                            </div>
+                            <div class="cmtf-title">
+                                <label for="cmtfTitle" class="form-label text-success">نقاط قوت</label>
+                                <div class="d-flex justify-content-between">
+                                    <input type="text" class="form-control cmtft" id="cmtfTitel">
+                                    <button type="submit" class="btn cmtf-btn">ثبت</button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="cmtf-text">
+                            <label for="cmtfTxt" class="form-label">متن نظر شما (اجباری)</label>
+                            <textarea class="form-control" id="cmtfTxt" rows="3" required></textarea>
+                        </div>
+                        <div class="unknown-user form-check mt-3">
+                            <input class="form-check-input" type="checkbox" value="" id="unknownUser">
+                            <label class="form-check-label" for="unknownUser">
+                              ارسال دیدگاه به صورت ناشناس
+                            </label>
+                        </div>
+                        <p class="text-muted rule-acc">با ثبت نظر با <a href="#" class="rule"> قوانین انتشار محتوا</a> و نظر سالمد موافقت میکنم</p>
+                        <button type="submit" class="btn cmt-sub-btn mb-4">ثبت نظر</button>
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
+        <p class="product-id text-center">شناسه کالا: <span id="productId">SLM-۳۷۸۹۵۴</span></p>
     </div>
     <script>
         const scrollSpy = new bootstrap.ScrollSpy(document.body, {
